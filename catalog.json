@@ -1,0 +1,203 @@
+[
+  {
+    "slug": "1password",
+    "name": "1Password",
+    "aliases": [
+      "AgileBits",
+      "AgileBits Inc."
+    ],
+    "category": "passwords",
+    "typical_price_monthly": 3.99,
+    "price_basis": "advertised Individual plan, checked 2026-07 after the March 2026 price change",
+    "verdict": "KEEP",
+    "verdict_reason": "KEEP: a rebuild bug here does not cost you a file, it costs you every account you own.",
+    "what_zo_builds": "Nothing that touches the vault. Rolling your own secret store is how people end up with plaintext passwords in a markdown file. Around it, Zo builds an automation that cross-checks your subscription ledger for accounts worth closing, a quarterly reminder to run Watchtower and refresh your emergency kit, and a standing rule that credentials never land in files or logs. The cryptography stays with people who do cryptography.",
+    "hours_to_build": 40,
+    "annual_savings": 0,
+    "dont_kill_if": "The only honest exit is sideways, to another audited manager or a free built-in like Apple Passwords if you live on one platform. Rolling your own is not an exit, it is an incident.",
+    "build_brief": "Goal: keep 1Password and audit around it. Do not ask me to export my vault into plain files. Build /security/audit.md: read my subscription ledger and list every service with a login I no longer pay for, so I can close those accounts. Add a quarterly automation that reminds me to check my 1Password emergency kit and run Watchtower. Add a permanent rule that you never store passwords in files, logs, or notes. Done when the first audit lists my dead accounts and the reminder fires on schedule.",
+    "sources": [
+      "https://1password.com/pricing/password-manager"
+    ]
+  },
+  {
+    "slug": "calendly",
+    "name": "Calendly",
+    "category": "scheduling",
+    "typical_price_monthly": 12,
+    "price_basis": "advertised Standard plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: a booking page is one route, one calendar check, and one confirmation email.",
+    "what_zo_builds": "One route at /book renders your open slots by reading Google Calendar free/busy. A form posts the pick, the route writes the event to the calendar, and an automation emails both sides a confirmation and a reminder the morning of. Buffer rules and working hours live in one small config file you edit directly.",
+    "hours_to_build": 5,
+    "annual_savings": 144,
+    "dont_kill_if": "Your booking flow collects payments, does round-robin routing across a sales team, or feeds a CRM your employer mandates. Money and teammates are both KEEP walls.",
+    "build_brief": "Goal: replace Calendly with a booking route on you. Connect my Google Calendar. Create a route at /book that reads free/busy for the next 14 days and shows 30 minute slots inside my working hours, with a 15 minute buffer after each meeting. On submit, create the calendar event with the visitor as guest and send us both a confirmation email. Add a morning automation that emails me the day's bookings. Done when a stranger can book a real slot and it lands on my calendar without me touching anything.",
+    "sources": [
+      "https://calendly.com/pricing"
+    ]
+  },
+  {
+    "slug": "dropbox",
+    "name": "Dropbox",
+    "aliases": [
+      "Dropbox, Inc.",
+      "Dropbox International"
+    ],
+    "category": "storage",
+    "typical_price_monthly": 11.99,
+    "price_basis": "advertised Plus plan billed monthly, checked 2026-07",
+    "verdict": "KEEP",
+    "verdict_reason": "KEEP: 2TB of synced storage is a storage bill, not a workflow. Zo is not a hard drive.",
+    "what_zo_builds": "Around it, not instead of it. Zo connects to your files and becomes the thing Dropbox never was: an agent that finds the contract from March, renames the mess in /scans, and builds a route that shares a folder as a clean gallery. The storage stays where it is. What dies is the idea that you need Dropbox's paid AI and doc tools, because an agent reading your files already does that.",
+    "hours_to_build": 25,
+    "annual_savings": 0,
+    "dont_kill_if": "The KEEP holds while you need live sync across devices. If your 2TB is mostly cold archive, a one-time move to a cheaper object store or a local drive kills the bill.",
+    "build_brief": "Goal: keep Dropbox, make it earn the fee. Connect to my Dropbox. Build an index of every folder over 1GB and a report of duplicates and dead weight in /reports/storage.md. Add a monthly automation that re-runs the audit and emails me what grew. Create a rule that when I ask you to find a file, you search Dropbox and my Zo files together. Done when the first audit report lands and I have deleted enough junk to see the usage number drop.",
+    "sources": [
+      "https://www.dropbox.com/plans"
+    ]
+  },
+  {
+    "slug": "grammarly",
+    "name": "Grammarly",
+    "aliases": [
+      "Grammarly, Inc."
+    ],
+    "category": "writing",
+    "typical_price_monthly": 30,
+    "price_basis": "advertised Pro plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $30 a month for an editor when an agent that edits lives on your server.",
+    "what_zo_builds": "A proofing pass is one instruction to your Zo: fix grammar, keep my voice, show me the diff. Make it a rule so every draft in /writing gets a marked-up copy next to it. A private route accepts pasted text and hands back the corrected version for anything you write outside the file tree. Your style notes live in one file the agent reads first.",
+    "hours_to_build": 2,
+    "annual_savings": 360,
+    "dont_kill_if": "Your writing happens inside locked-down web apps where a browser extension is the only thing that can reach the text, and company policy blocks pasting drafts out.",
+    "build_brief": "Goal: replace Grammarly with an editing pass on you. Create /writing/style.md and I will fill in my voice rules. Add a rule: when I save a draft under /writing, produce draft.edited.md with grammar and clarity fixes that keep my voice, plus a short list of what changed and why. Create a private route at /proof where I paste text and get the corrected version back with changes marked. Done when I paste a rough paragraph and the output needs no second pass.",
+    "sources": [
+      "https://www.grammarly.com/plans"
+    ]
+  },
+  {
+    "slug": "linktree",
+    "name": "Linktree",
+    "category": "link-in-bio",
+    "typical_price_monthly": 15,
+    "price_basis": "advertised Pro plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: it is one static page of links. The least defensible $15 in software.",
+    "what_zo_builds": "One route that renders a list of links from a links.json file you edit in plain text. Zo hosts it on your own domain, so the URL stops advertising Linktree. Click counts, if you want them, are a redirect route writing one line per click to a log file. The analytics dashboard is a second route that reads that log.",
+    "hours_to_build": 1,
+    "annual_savings": 180,
+    "dont_kill_if": "Your bio link sells products through Linktree's own checkout and shop features. Payments through the page put it behind the money wall until you move the store elsewhere.",
+    "build_brief": "Goal: replace my Linktree with a page you host. I will paste my current list of links and titles. Create /links as a single clean mobile-first page reading from links.json, dark background, one column of buttons. Add a /go/:id redirect route that appends each click to clicks.log before forwarding, and a private /links/stats route that totals the log by link. Done when the page loads fast on my phone, every link works, and I have updated my social bios to the new URL.",
+    "sources": [
+      "https://linktr.ee/s/pricing"
+    ]
+  },
+  {
+    "slug": "mailchimp",
+    "name": "Mailchimp",
+    "aliases": [
+      "The Rocket Science Group",
+      "Intuit Mailchimp"
+    ],
+    "category": "email-marketing",
+    "typical_price_monthly": 20,
+    "price_basis": "advertised Standard plan at 500 contacts, checked 2026-07",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: keep the send pipes, fire the marketing suite. Essentials plus Zo does the rest.",
+    "what_zo_builds": "Zo replaces everything above the send button: it drafts campaigns in your voice from a content file, segments your audience from the subscriber CSV you export, schedules sends, and reads campaign reports back into plain markdown. Mailchimp keeps one job, deliverability, because warmed sending infrastructure is the part a rebuild can genuinely break. Drop from Standard at $20 to Essentials at $13 and stop paying for the journey builder.",
+    "hours_to_build": 8,
+    "annual_savings": 84,
+    "dont_kill_if": "You depend on Standard-only features like advanced journeys or send-time optimization to hit revenue targets, or your list is large enough that the tier math changes.",
+    "build_brief": "Goal: downgrade Mailchimp from Standard to Essentials and move the thinking to you. Export my audience CSV into /marketing/subscribers and keep it synced monthly. Create a campaign workflow: I write bullets in /marketing/queue, you draft the email in my voice, I approve, you load it into Mailchimp for the send. Add a monthly automation that pulls open and click stats into /marketing/reports.md. Done when one full campaign has shipped this way and my plan page shows Essentials.",
+    "sources": [
+      "https://mailchimp.com/pricing/marketing/"
+    ]
+  },
+  {
+    "slug": "notion",
+    "name": "Notion",
+    "aliases": [
+      "Notion Labs",
+      "Notion Labs, Inc."
+    ],
+    "category": "notes-and-docs",
+    "typical_price_monthly": 12,
+    "price_basis": "advertised Plus plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: your notes are markdown files with a database bolted on. Zo already has both.",
+    "what_zo_builds": "A folder of markdown files replaces the pages. Zo hosts a route that renders them as a wiki with full text search. Tables become JSON or SQLite files the agent queries in plain English. A nightly automation backs the whole tree up to Drive. Export from Notion once, import once, done.",
+    "hours_to_build": 6,
+    "annual_savings": 144,
+    "dont_kill_if": "You share a workspace with teammates or clients who edit pages. The moment a second person needs live access, the network wall applies and this becomes a KEEP.",
+    "build_brief": "Goal: replace Notion with files and one route. Export my Notion workspace as Markdown and CSV, put the archive in /notes/import and unpack it. Create a route at /notes that lists and renders every markdown file with full text search. Convert each CSV database into a JSON file next to its pages. Add a nightly automation that snapshots /notes to Google Drive. Done when I can find any note by search in under five seconds and nothing links back to notion.so.",
+    "sources": [
+      "https://www.notion.com/pricing"
+    ]
+  },
+  {
+    "slug": "otter-ai",
+    "name": "Otter.ai",
+    "aliases": [
+      "Otter.ai, Inc.",
+      "AISense"
+    ],
+    "category": "transcription",
+    "typical_price_monthly": 16.99,
+    "price_basis": "advertised Pro plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: transcription is a built-in Zo capability. You are paying rent on a feature.",
+    "what_zo_builds": "Drop a recording into /recordings and an automation transcribes it, writes a summary with action items to /notes/meetings, and files the audio away. Zo's transcription handles the same audio Otter does. Search across every transcript is the agent reading your own files. No per-minute quota, no separate app holding your meetings.",
+    "hours_to_build": 2,
+    "annual_savings": 203.88,
+    "dont_kill_if": "You need a live bot that joins Zoom or Meet calls in real time and shows captions to other participants while the meeting runs. Zo transcribes recordings, not live streams.",
+    "build_brief": "Goal: replace Otter with a transcription pipeline on you. Create a watched folder at /recordings. When a new audio or video file lands, transcribe it, then write a markdown note to /notes/meetings with the date, a five line summary, action items, and the full transcript below. Move the processed file to /recordings/done. Add a weekly automation that emails me a digest of the week's meetings. Done when I drop in a test recording and the finished note appears without me asking.",
+    "sources": [
+      "https://otter.ai/pricing"
+    ]
+  },
+  {
+    "slug": "quickbooks",
+    "name": "QuickBooks",
+    "aliases": [
+      "Intuit",
+      "Intuit Inc."
+    ],
+    "category": "accounting",
+    "typical_price_monthly": 38,
+    "price_basis": "advertised Simple Start plan, checked 2026-07",
+    "verdict": "KEEP",
+    "verdict_reason": "KEEP: it files with the IRS. A rebuild bug is not a bug, it is an audit.",
+    "what_zo_builds": "Nothing that touches the books. Around it, Zo builds a receipts inbox where you forward invoices and it files PDFs by month, a pre-bookkeeping pass that categorizes your exported transaction CSV before your accountant sees it, and a quarterly automation that reminds you what estimated taxes are due. QuickBooks keeps the ledger, the payroll, and the legal surface. Zo kills the hours you spend feeding it.",
+    "hours_to_build": 60,
+    "annual_savings": 0,
+    "dont_kill_if": "There is no kill condition while real money and tax filings run through it. The honest question is whether a cheaper ledger fits your business, not whether an agent should do your books.",
+    "build_brief": "Goal: keep QuickBooks, cut the manual feeding. Create /finance/inbox and a rule: when I forward a receipt email or drop a PDF, file it as /finance/receipts/YYYY-MM/vendor-amount.pdf and log one line to receipts.csv. Each month I will export the QuickBooks transaction CSV; draft category suggestions in a review file I approve before anything goes back in. Add a quarterly automation reminding me of estimated tax deadlines two weeks ahead. Done when a month of receipts has filed itself and the first review file is approved.",
+    "sources": [
+      "https://quickbooks.intuit.com/pricing/"
+    ]
+  },
+  {
+    "slug": "zapier",
+    "name": "Zapier",
+    "aliases": [
+      "Zapier Inc",
+      "Zapier, Inc."
+    ],
+    "category": "automation",
+    "typical_price_monthly": 29.99,
+    "price_basis": "advertised Professional plan, 750 tasks, billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: you are paying $360 a year for cron jobs and if statements.",
+    "what_zo_builds": "Each Zap becomes a scheduled automation on your Zo. Triggers that watched Gmail or webhooks become automations that read Gmail directly, or routes that accept the incoming webhook. The glue code between steps is code the agent writes once and you own. No task quotas, no per-step pricing, no editor UI you visit twice a year.",
+    "hours_to_build": 3,
+    "annual_savings": 359.88,
+    "dont_kill_if": "You run Zaps against apps Zo has no integration or API access for, or a non-technical teammate maintains the workflows and needs the visual editor to do it.",
+    "build_brief": "Goal: move my Zapier workflows onto you and cancel the plan. I will paste an export or screenshots of each Zap. For every trigger, create either a scheduled automation that polls, or a route that accepts the incoming webhook. Rebuild each action step with the matching integration: Gmail, Calendar, Drive, or a plain HTTP call. Log every run to /automations/log.md. Done when each former Zap has fired successfully once from its real trigger and I have a table mapping old Zap to new automation.",
+    "sources": [
+      "https://zapier.com/pricing"
+    ]
+  }
+]
