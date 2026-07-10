@@ -15,7 +15,7 @@ The short version:
 ## Run it
 
 ```
-git clone https://github.com/jeffkazzee/kill-list-engine /home/workspace/kill-list
+git clone https://github.com/Jeff-Kazzee/kill-list-engine /home/workspace/kill-list
 cd /home/workspace/kill-list && bun install
 bun test
 ```
