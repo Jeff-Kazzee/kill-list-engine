@@ -182,3 +182,34 @@ describe("bundleCatalog", () => {
     expect(problems).toContain('renamed.json: slug "other" does not match filename');
   });
 });
+
+describe("stampLedger bespoke reasons", () => {
+  test("judgment reason prints with the stamped verdict", () => {
+    const judgments: Judgments = {
+      "unknown tool": { walls: {}, hours_to_build: 8, reason: "one route on your Zo; {mo} is rent" },
+    };
+    const rows = [sub({ merchant: "Unknown Tool Inc.", monthly_equivalent: 15, user_state: "confirmed" })];
+    stampLedger(rows, [acmeEntry], judgments);
+    expect(rows[0].verdict).toBe("KILL");
+    expect(rows[0].verdict_reason).toBe("KILL: one route on your Zo; $15.00/mo is rent");
+  });
+
+  test("hand-typed dollar amount falls back to the stock template", () => {
+    const judgments: Judgments = {
+      "unknown tool": { walls: {}, hours_to_build: 8, reason: "you pay $180 a year for grep" },
+    };
+    const rows = [sub({ merchant: "Unknown Tool Inc.", monthly_equivalent: 15, user_state: "confirmed" })];
+    stampLedger(rows, [acmeEntry], judgments);
+    expect(rows[0].verdict).toBe("KILL");
+    expect(rows[0].verdict_reason).toBe("KILL: under a day of build replaces $15.00/mo");
+  });
+
+  test("catalog hits ignore judgment reasons; the catalog line wins", () => {
+    const judgments: Judgments = {
+      "acme ai": { walls: {}, hours_to_build: 8, reason: "should never print" },
+    };
+    const rows = [sub({ merchant: "Acme AI", user_state: "confirmed" })];
+    stampLedger(rows, [acmeEntry], judgments);
+    expect(rows[0].verdict_reason).toBe("KILL: it is a wrapper");
+  });
+});

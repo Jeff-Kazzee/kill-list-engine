@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
 import type { CatalogEntry, KeepWalls, Subscription } from "../src/types.ts";
-import { catalogVerdict, isThinInbox, matchCatalog, rubricVerdict } from "../src/verdict.ts";
+import { BESPOKE_MAX_LENGTH, bespokeReason, catalogVerdict, isThinInbox, matchCatalog, rubricVerdict } from "../src/verdict.ts";
 
 const NO_WALLS: KeepWalls = {
   money_movement: false,
@@ -102,5 +102,46 @@ describe("isThinInbox", () => {
     expect(isThinInbox([sub("confirmed"), sub("confirmed"), sub("confirmed")])).toBe(true);
     expect(isThinInbox([sub("confirmed"), sub("confirmed"), sub("confirmed"), sub("confirmed")])).toBe(false);
     expect(isThinInbox([sub("pending"), sub("excluded"), sub("private"), sub("pending")])).toBe(true);
+  });
+});
+
+describe("bespokeReason", () => {
+
+  test("clean line gets the rubric verdict stamped on front", () => {
+    expect(bespokeReason("a booking page is one route on your Zo", "KILL", 1200, 4)).toBe(
+      "KILL: a booking page is one route on your Zo",
+    );
+  });
+
+  test("agent-typed verdict prefix is stripped; the stamp cannot disagree", () => {
+    expect(bespokeReason("KEEP: sunk cost is not a wall", "KILL", 1200, 4)).toBe(
+      "KILL: sunk cost is not a wall",
+    );
+  });
+
+  test("tokens fill from script math, never the model", () => {
+    expect(bespokeReason("{mo} rents what a {hrs}-hour build owns", "KILL", 1500, 3)).toBe(
+      "KILL: $15.00/mo rents what a 3-hour build owns",
+    );
+    expect(bespokeReason("{yr} back", "KILL", 1000, 2)).toBe("KILL: $120.00/yr back");
+  });
+
+  test("hand-typed dollar amounts reject the whole line", () => {
+    expect(bespokeReason("costs $15 a month for nothing", "KILL", 1500, 3)).toBeNull();
+    expect(bespokeReason("costs $ 15", "KILL", 1500, 3)).toBeNull();
+  });
+
+  test("money tokens without a verified price reject; hours token survives", () => {
+    expect(bespokeReason("{mo} is rent", "TRIM", null, 8)).toBeNull();
+    expect(bespokeReason("a {hrs}-hour build replaces it", "TRIM", null, 8)).toBe(
+      "TRIM: a 8-hour build replaces it",
+    );
+  });
+
+  test("empty, multiline, and oversized lines reject", () => {
+    expect(bespokeReason(undefined, "KILL", 1000, 2)).toBeNull();
+    expect(bespokeReason("   ", "KILL", 1000, 2)).toBeNull();
+    expect(bespokeReason("two\nlines", "KILL", 1000, 2)).toBeNull();
+    expect(bespokeReason("x".repeat(BESPOKE_MAX_LENGTH + 1), "KILL", 1000, 2)).toBeNull();
   });
 });

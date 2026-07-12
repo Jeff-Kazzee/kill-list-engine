@@ -1,6 +1,6 @@
 import { formatUSD } from "./money.ts";
 import { merchantKey } from "./parse.ts";
-import type { CatalogEntry, KeepWalls, Subscription, VerdictResult } from "./types.ts";
+import type { CatalogEntry, KeepWalls, Subscription, Verdict, VerdictResult } from "./types.ts";
 
 export const THIN_INBOX_THRESHOLD = 4;
 
@@ -56,6 +56,32 @@ export function rubricVerdict(
     return { verdict: "TRIM", reason: `TRIM: full rebuild is heavy; kill the tier, keep the core`, source: "rubric" };
   }
   return { verdict: "KEEP", reason: "KEEP: the rebuild costs more than it saves", source: "rubric" };
+}
+
+export const BESPOKE_MAX_LENGTH = 120;
+
+// A bespoke reason line written by the user's Zo for a non-catalog merchant.
+// The verdict word is stamped here, never by the model, so the line cannot
+// disagree with the rubric. Number tokens {mo} {yr} {hrs} are interpolated
+// from script-derived figures; a hand-typed dollar amount rejects the whole
+// line and the stock template prints instead. Fail closed, always.
+export function bespokeReason(
+  raw: string | undefined,
+  verdict: Verdict,
+  monthlyCents: number | null,
+  hoursToBuild: number,
+): string | null {
+  if (!raw) return null;
+  const line = raw.trim();
+  if (!line || /[\r\n]/.test(line) || line.length > BESPOKE_MAX_LENGTH) return null;
+  if (/\$\s*\d/.test(line)) return null;
+  if (monthlyCents === null && /\{(mo|yr)\}/.test(line)) return null;
+  const filled = line
+    .replaceAll("{mo}", monthlyCents === null ? "" : `${formatUSD(monthlyCents)}/mo`)
+    .replaceAll("{yr}", monthlyCents === null ? "" : `${formatUSD(monthlyCents * 12)}/yr`)
+    .replaceAll("{hrs}", String(Math.max(1, Math.round(hoursToBuild))));
+  const cleaned = filled.replace(/^(KILL|KEEP|TRIM)\s*:\s*/i, "");
+  return `${verdict}: ${cleaned}`;
 }
 
 export function catalogVerdict(entry: CatalogEntry): VerdictResult {

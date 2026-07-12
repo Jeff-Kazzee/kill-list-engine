@@ -6,7 +6,7 @@ import { join } from "node:path";
 import { formatUSD } from "../src/money.ts";
 import { merchantKey } from "../src/parse.ts";
 import type { CatalogEntry, KeepWalls, Subscription } from "../src/types.ts";
-import { catalogVerdict, isThinInbox, matchCatalog, rubricVerdict } from "../src/verdict.ts";
+import { bespokeReason, catalogVerdict, isThinInbox, matchCatalog, rubricVerdict } from "../src/verdict.ts";
 import { ping } from "./ping.ts";
 import type { LedgerFile } from "./scan.ts";
 
@@ -16,6 +16,9 @@ const OUT = process.env.KILL_LIST_OUT ?? join(ROOT, "out");
 export interface Judgment {
   walls?: Partial<KeepWalls>;
   hours_to_build: number;
+  /** One line in the house voice, written by the user's Zo. Prose only:
+   * the verdict word and every number stay script-derived. */
+  reason?: string;
 }
 
 export type Judgments = Record<string, Judgment>;
@@ -71,7 +74,7 @@ export function stampLedger(
       const cents = sub.monthly_equivalent === null ? null : Math.round(sub.monthly_equivalent * 100);
       const r = rubricVerdict({ ...NO_WALLS, ...j.walls }, j.hours_to_build, cents);
       sub.verdict = r.verdict;
-      sub.verdict_reason = r.reason;
+      sub.verdict_reason = bespokeReason(j.reason, r.verdict, cents, j.hours_to_build) ?? r.reason;
       continue;
     }
 
