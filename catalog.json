@@ -21,6 +21,48 @@
     ]
   },
   {
+    "slug": "acuity-scheduling",
+    "name": "Acuity Scheduling",
+    "aliases": [
+      "Acuity",
+      "Acuity Scheduling LLC"
+    ],
+    "category": "scheduling",
+    "typical_price_monthly": 20,
+    "price_basis": "advertised Starter plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $240 a year to show open slots and take a booking. One calendar read, one form.",
+    "what_zo_builds": "A booking route that reads your calendar, shows open slots per appointment type, and takes the booking. Intake questions become form fields the route stores with the event. Confirmations and reminders run as automations. Appointment types, durations, and padding live in one config file you edit directly.",
+    "hours_to_build": 8,
+    "annual_savings": 240,
+    "dont_kill_if": "Clients pay at booking through Stripe or Square inside Acuity, you route bookings across multiple staff calendars, or the scheduler is embedded in a Squarespace site the business runs on. Payments and staff routing are KEEP walls.",
+    "build_brief": "Goal: replace Acuity Scheduling with a booking route on you. Connect my Google Calendar. Create a route at /book with my appointment types, each with its own duration, padding, and intake questions. On submit, write the event, store the intake answers with it, and email the client a confirmation. Add a reminder email the day before at 9am and a morning summary of the day's appointments to me. Done when a client can pick a type, answer the intake questions, book a real slot, and both of us get the right emails without me touching anything.",
+    "sources": [
+      "https://www.acuityscheduling.com/pricing"
+    ]
+  },
+  {
+    "slug": "cal-com",
+    "name": "Cal.com",
+    "aliases": [
+      "Cal.com, Inc.",
+      "Cal com"
+    ],
+    "category": "scheduling",
+    "typical_price_monthly": 12,
+    "price_basis": "advertised Teams plan billed yearly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: the free plan already does it. Paying means renting a team seat for a team of one.",
+    "what_zo_builds": "The same booking route the Calendly kill gets: /book reads Google Calendar free/busy, shows your open slots, writes the event, and emails both sides. Cal.com's one real edge, running bookings on your own domain, is the default here because the route already lives on your own address.",
+    "hours_to_build": 4,
+    "annual_savings": 144,
+    "dont_kill_if": "You run round-robin or collective scheduling across a real team, or your employer pays for the Teams seat and shared event types. Teammates are a KEEP wall.",
+    "build_brief": "Goal: replace my Cal.com subscription with a booking route on you. Connect my Google Calendar. Create a route at /book that reads free/busy for the next 14 days and lists 30 minute slots inside my working hours, with a 15 minute buffer after each meeting. On submit, write the event with the visitor as guest and email us both a confirmation. Port my event types from Cal.com: I will paste them, keep the same durations and buffers. Done when every event type I had on Cal.com books correctly through the new route and lands on my calendar.",
+    "sources": [
+      "https://cal.com/pricing"
+    ]
+  },
+  {
     "slug": "calendly",
     "name": "Calendly",
     "category": "scheduling",
@@ -35,6 +77,27 @@
     "build_brief": "Goal: replace Calendly with a booking route on you. Connect my Google Calendar. Create a route at /book that reads free/busy for the next 14 days and shows 30 minute slots inside my working hours, with a 15 minute buffer after each meeting. On submit, create the calendar event with the visitor as guest and send us both a confirmation email. Add a morning automation that emails me the day's bookings. Done when a stranger can book a real slot and it lands on my calendar without me touching anything.",
     "sources": [
       "https://calendly.com/pricing"
+    ]
+  },
+  {
+    "slug": "coda",
+    "name": "Coda",
+    "aliases": [
+      "Coda Project, Inc.",
+      "Superhuman Docs"
+    ],
+    "category": "notes-and-docs",
+    "typical_price_monthly": 15,
+    "price_basis": "advertised Pro plan per Doc Maker billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: docs, tables, automations. Zo does all three without a per maker seat.",
+    "what_zo_builds": "Docs export to markdown. Tables export to CSV and become JSON or SQLite files the agent queries in plain English. The buttons and automations that pushed you into the paid Doc Maker seat become scheduled automations on your Zo, and a route renders the docs as a wiki with search, same as the Notion kill.",
+    "hours_to_build": 6,
+    "annual_savings": 180,
+    "dont_kill_if": "Other people edit your docs. Coda bills the maker and lets editors ride free, so a live team workspace is cheap for what it does. The network wall applies and this becomes a KEEP.",
+    "build_brief": "Goal: replace Coda with files, tables, and one route. Export my docs as markdown and my tables as CSV into /notes/import. Convert each table to a JSON file stored next to its doc. Walk me through which buttons, formulas, and automations did real work, then rebuild only those as scheduled automations here. Create a route at /notes that renders every doc with full text search. Done when I can read every doc, query every table in plain English, and the Doc Maker seat has nothing left to bill.",
+    "sources": [
+      "https://coda.io/pricing"
     ]
   },
   {
@@ -59,6 +122,27 @@
     ]
   },
   {
+    "slug": "evernote",
+    "name": "Evernote",
+    "aliases": [
+      "Evernote Corporation"
+    ],
+    "category": "notes-and-docs",
+    "typical_price_monthly": 14.99,
+    "price_basis": "advertised Starter plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: the cheap plan caps you at 1,000 notes and the old plans quietly renew at $24.99. Leave.",
+    "what_zo_builds": "Your notes come out through the export and land as files you own: markdown with attachments beside it, notebooks as folders, tags as front matter. A route renders everything with full text search, a small bookmarklet replaces the web clipper, and a nightly automation backs the whole tree up to Drive.",
+    "hours_to_build": 6,
+    "annual_savings": 179.88,
+    "dont_kill_if": "Years of scanned PDFs and handwriting live in there and you search inside them daily. Evernote's OCR across old scans is genuinely hard to replace. Test the export on one notebook before you swing.",
+    "build_brief": "Goal: replace Evernote with files and one route. I will run the Evernote export and put the .enex files in /notes/import. Convert every note to markdown with its attachments beside it, one folder per notebook, tags as front matter. Create a route at /notes that lists and renders everything with full text search. Add a bookmarklet that posts a page's title, URL, and selected text into /notes/inbox as a new note. Snapshot /notes to Google Drive nightly. Done when a search for any old note returns it in under five seconds and nothing links back to evernote.com.",
+    "sources": [
+      "https://help.evernote.com/hc/en-us/articles/46317642175763-Discontinuing-Evernote-Personal-Professional-Introducing-Starter-Advanced-FAQ",
+      "https://evernote.com/compare-plans"
+    ]
+  },
+  {
     "slug": "grammarly",
     "name": "Grammarly",
     "aliases": [
@@ -76,6 +160,27 @@
     "build_brief": "Goal: replace Grammarly with an editing pass on you. Create /writing/style.md and I will fill in my voice rules. Add a rule: when I save a draft under /writing, produce draft.edited.md with grammar and clarity fixes that keep my voice, plus a short list of what changed and why. Create a private route at /proof where I paste text and get the corrected version back with changes marked. Done when I paste a rough paragraph and the output needs no second pass.",
     "sources": [
       "https://www.grammarly.com/plans"
+    ]
+  },
+  {
+    "slug": "ifttt-pro",
+    "name": "IFTTT Pro",
+    "aliases": [
+      "IFTTT",
+      "IFTTT Inc"
+    ],
+    "category": "automation",
+    "typical_price_monthly": 4.99,
+    "price_basis": "advertised Pro plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: five dollars a month for two-step applets a single automation file replaces.",
+    "what_zo_builds": "Every applet becomes one small automation: watch the trigger, do the thing. Multi-step applets with filters and queries, the Pro features, are a few more lines in the same file. Twenty applets fit in one folder with a shared log, and nothing counts how many you run or how fast they fire.",
+    "hours_to_build": 1,
+    "annual_savings": 59.88,
+    "dont_kill_if": "Your applets drive smart home hardware through IFTTT's device partners. Some of those closed vendor hooks have no public API, and that bridge is what the five dollars actually buys.",
+    "build_brief": "Goal: replace IFTTT Pro with automations on you and cancel the plan. I will list my applets as trigger and action pairs. For each one, create a scheduled automation that polls the trigger source or a route that catches its webhook, then performs the action through the matching integration or an HTTP call. Keep filters as plain if statements in the step code. Log runs to /automations/log.md. Done when every applet pair has fired once for real and nothing on my IFTTT dashboard still matters.",
+    "sources": [
+      "https://ifttt.com/plans"
     ]
   },
   {
@@ -117,6 +222,48 @@
     ]
   },
   {
+    "slug": "make",
+    "name": "Make",
+    "aliases": [
+      "Make.com",
+      "Integromat"
+    ],
+    "category": "automation",
+    "typical_price_monthly": 9,
+    "price_basis": "advertised Core plan, 10,000 credits, billed annually, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: the same cron jobs and if statements as Zapier, sold by the credit instead of the task.",
+    "what_zo_builds": "Each scenario becomes a scheduled automation or a webhook route on your Zo. The visual modules become plain steps the agent writes once: read the trigger, transform the data, call the API. No credits metered per module action, no scenario caps, and the run log is a file you can actually read.",
+    "hours_to_build": 3,
+    "annual_savings": 108,
+    "dont_kill_if": "Your scenarios hit apps Zo cannot reach by integration or API, or a non-technical teammate maintains them and needs the visual editor. Then the editor is the product, not the plumbing.",
+    "build_brief": "Goal: move my Make scenarios onto you and cancel the plan. I will paste screenshots or the blueprint export of each scenario. For each trigger, create a scheduled automation that polls or a route that accepts the incoming webhook. Rebuild the module chain as plain steps using Gmail, Calendar, Drive, or direct HTTP calls. Log every run to /automations/log.md with status and duration. Done when each former scenario has fired successfully once from its real trigger and I have a table mapping old scenario to new automation.",
+    "sources": [
+      "https://www.make.com/en/pricing"
+    ]
+  },
+  {
+    "slug": "n8n-cloud",
+    "name": "n8n Cloud",
+    "aliases": [
+      "n8n",
+      "n8n GmbH"
+    ],
+    "category": "automation",
+    "typical_price_monthly": 20,
+    "price_basis": "advertised Starter plan billed annually, EUR 20 on the page, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: paying rent to run an open source app. Your Zo is the server.",
+    "what_zo_builds": "n8n is open source. Zo installs the Community Edition right here, or skips the app entirely and rewrites the workflows as plain automations. Either way executions stop being metered, the data never visits a third party cloud, and the server bill is one you already pay.",
+    "hours_to_build": 2,
+    "annual_savings": 240,
+    "dont_kill_if": "A team shares the instance and needs the SSO, projects, and collaboration features the cloud tiers gate, or your workflows page customers when they fail and you want n8n on the hook for uptime instead of you.",
+    "build_brief": "Goal: get me off n8n Cloud without losing a workflow. Export every workflow from my cloud account first. Then show me two options sized in hours before you start: one, install n8n Community Edition on this machine, import the exports, and put the editor behind a private route; two, rebuild the workflows as plain scheduled automations and retire the app. Done when every workflow runs here on schedule, executions are unmetered, and the cloud subscription has nothing left running on it.",
+    "sources": [
+      "https://n8n.io/pricing"
+    ]
+  },
+  {
     "slug": "notion",
     "name": "Notion",
     "aliases": [
@@ -135,6 +282,27 @@
     "build_brief": "Goal: replace Notion with files and one route. Export my Notion workspace as Markdown and CSV, put the archive in /notes/import and unpack it. Create a route at /notes that lists and renders every markdown file with full text search. Convert each CSV database into a JSON file next to its pages. Add a nightly automation that snapshots /notes to Google Drive. Done when I can find any note by search in under five seconds and nothing links back to notion.so.",
     "sources": [
       "https://www.notion.com/pricing"
+    ]
+  },
+  {
+    "slug": "obsidian-sync",
+    "name": "Obsidian Sync",
+    "aliases": [
+      "Obsidian",
+      "Dynalist Inc"
+    ],
+    "category": "storage",
+    "typical_price_monthly": 5,
+    "price_basis": "advertised Standard plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $60 a year to copy markdown files between machines. That is rsync with a subscription.",
+    "what_zo_builds": "Your vault is a folder of markdown files, the one format every sync tool on earth already handles. Zo holds the canonical copy, a git repo gives you version history that beats Sync's, and each device pulls with the free Obsidian Git plugin. End to end encryption becomes simpler: it is your server.",
+    "hours_to_build": 2,
+    "annual_savings": 60,
+    "dont_kill_if": "You edit heavily on iOS and never want to think about a merge conflict. Obsidian Sync's mobile story is genuinely smoother than git on a phone, and five dollars for that sanity is a fair trade.",
+    "build_brief": "Goal: replace Obsidian Sync with a git backed vault on you. Create a private repo here for my vault and import the current copy. Write the Obsidian Git plugin config for my desktop and phone: pull on open, push on save, sensible conflict handling. Add an automation that commits the server copy hourly and snapshots the vault to Google Drive nightly. Write me a one page setup note per device. Done when an edit on my phone shows up on my laptop inside a minute and the git log shows every change.",
+    "sources": [
+      "https://obsidian.md/sync"
     ]
   },
   {
@@ -177,6 +345,47 @@
     "build_brief": "Goal: keep QuickBooks, cut the manual feeding. Create /finance/inbox and a rule: when I forward a receipt email or drop a PDF, file it as /finance/receipts/YYYY-MM/vendor-amount.pdf and log one line to receipts.csv. Each month I will export the QuickBooks transaction CSV; draft category suggestions in a review file I approve before anything goes back in. Add a quarterly automation reminding me of estimated tax deadlines two weeks ahead. Done when a month of receipts has filed itself and the first review file is approved.",
     "sources": [
       "https://quickbooks.intuit.com/pricing/"
+    ]
+  },
+  {
+    "slug": "roam-research",
+    "name": "Roam Research",
+    "aliases": [
+      "Roam Research, Inc.",
+      "Roam"
+    ],
+    "category": "notes-and-docs",
+    "typical_price_monthly": 15,
+    "price_basis": "advertised Pro plan billed monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $180 a year for backlinks between text files. The graph is a folder plus grep.",
+    "what_zo_builds": "The graph exports as markdown and lands as files. A small indexer the agent writes recomputes the backlinks: every [[reference]] links both ways, rendered by a route with full text search and a daily notes page that creates itself. The outliner keystrokes go away. The thinking stays in files you own.",
+    "hours_to_build": 5,
+    "annual_savings": 180,
+    "dont_kill_if": "You live in the outliner and block references all day. For some people that workflow is the product, and no file tree fakes block level transclusion well.",
+    "build_brief": "Goal: replace Roam with markdown and a backlink index. Export my graph as markdown into /notes/import. Write an indexer that scans every [[wiki link]] and builds a backlinks map, then a route at /notes that renders each page with its linked references underneath. Add a daily note that creates itself on first visit each day, and full text search across everything. Done when I can open today's note, link to any page, and see the backlink appear on that page without Roam in the loop.",
+    "sources": [
+      "https://roamresearch.com"
+    ]
+  },
+  {
+    "slug": "savvycal",
+    "name": "SavvyCal",
+    "aliases": [
+      "SavvyCal LLC"
+    ],
+    "category": "scheduling",
+    "typical_price_monthly": 10,
+    "price_basis": "advertised Basic plan billed annually, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: a friendlier booking page is still a booking page. One route on your Zo.",
+    "what_zo_builds": "One booking route with the parts SavvyCal is loved for: ranked availability instead of a wall of slots, and your preferred times shown first. The route reads Google Calendar free/busy, scores slots against preferences in a small config file, and books straight onto the calendar with a confirmation to both sides.",
+    "hours_to_build": 4,
+    "annual_savings": 120,
+    "dont_kill_if": "You lean on team scheduling links or meeting polls shared across several people's calendars. More than one calendar owner is a KEEP wall.",
+    "build_brief": "Goal: replace SavvyCal with a booking route on you. Connect my Google Calendar. Create a route at /book that reads free/busy for the next 14 days and presents slots ranked by my preferences: mornings first, nothing after 4pm, 15 minute buffers between meetings. Let the visitor upload or paste their own calendar file to overlay mutual free times. On submit, write the event with the visitor as guest and email us both. Done when a stranger books a ranked slot and it lands on my calendar with the buffer respected.",
+    "sources": [
+      "https://savvycal.com/pricing"
     ]
   },
   {
