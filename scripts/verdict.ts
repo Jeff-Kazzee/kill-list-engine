@@ -70,7 +70,7 @@ export function stampLedger(
     }
 
     const j = judgments[merchantKey(sub.merchant)];
-    if (j) {
+    if (j && Number.isFinite(j.hours_to_build) && j.hours_to_build >= 0) {
       const cents = sub.monthly_equivalent === null ? null : Math.round(sub.monthly_equivalent * 100);
       const r = rubricVerdict({ ...NO_WALLS, ...j.walls }, j.hours_to_build, cents);
       sub.verdict = r.verdict;

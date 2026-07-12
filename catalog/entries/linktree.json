@@ -1,0 +1,15 @@
+{
+  "slug": "linktree",
+  "name": "Linktree",
+  "category": "link-in-bio",
+  "typical_price_monthly": 15.00,
+  "price_basis": "advertised Pro plan billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: it is one static page of links. The least defensible $15 in software.",
+  "what_zo_builds": "One route that renders a list of links from a links.json file you edit in plain text. Zo hosts it on your own domain, so the URL stops advertising Linktree. Click counts, if you want them, are a redirect route writing one line per click to a log file. The analytics dashboard is a second route that reads that log.",
+  "hours_to_build": 1,
+  "annual_savings": 180.00,
+  "dont_kill_if": "Your bio link sells products through Linktree's own checkout and shop features. Payments through the page put it behind the money wall until you move the store elsewhere.",
+  "build_brief": "Goal: replace my Linktree with a page you host. I will paste my current list of links and titles. Create /links as a single clean mobile-first page reading from links.json, dark background, one column of buttons. Add a /go/:id redirect route that appends each click to clicks.log before forwarding, and a private /links/stats route that totals the log by link. Done when the page loads fast on my phone, every link works, and I have updated my social bios to the new URL.",
+  "sources": ["https://linktr.ee/s/pricing"]
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "coda",
+  "name": "Coda",
+  "aliases": ["Coda Project, Inc.", "Superhuman Docs"],
+  "category": "notes-and-docs",
+  "typical_price_monthly": 15.00,
+  "price_basis": "advertised Pro plan per Doc Maker billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: docs, tables, automations. Zo does all three without a per maker seat.",
+  "what_zo_builds": "Docs export to markdown. Tables export to CSV and become JSON or SQLite files the agent queries in plain English. The buttons and automations that pushed you into the paid Doc Maker seat become scheduled automations on your Zo, and a route renders the docs as a wiki with search, same as the Notion kill.",
+  "hours_to_build": 6,
+  "annual_savings": 180.00,
+  "dont_kill_if": "Other people edit your docs. Coda bills the maker and lets editors ride free, so a live team workspace is cheap for what it does. The network wall applies and this becomes a KEEP.",
+  "build_brief": "Goal: replace Coda with files, tables, and one route. Export my docs as markdown and my tables as CSV into /notes/import. Convert each table to a JSON file stored next to its doc. Walk me through which buttons, formulas, and automations did real work, then rebuild only those as scheduled automations here. Create a route at /notes that renders every doc with full text search. Done when I can read every doc, query every table in plain English, and the Doc Maker seat has nothing left to bill.",
+  "sources": ["https://coda.io/pricing"]
+}

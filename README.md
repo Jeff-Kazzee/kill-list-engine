@@ -11,6 +11,11 @@ The short version:
 - Nothing personal leaves your machine. The site receives seven fixed status strings (`connected`, `scanning`, `parsing`, `reviewing`, `stamping`, `prospect`, `receipt_ready`) and nothing else, ever.
 - The review cockpit deploys as a private route on your Zo. The site never sees it.
 - Posting your receipt to the public Wall is a separate, explicit choice, the payload is sanitized to category labels and whole dollars, and a human approves it before it appears.
+- Common services use sourced entries in `catalog/entries/`. Unknown services go through the same deterministic rubric, while your Zo writes only the one-line explanation. The script stamps the verdict and inserts every number.
+
+## Catalog
+
+`catalog/entries/*.json` is the tracked source of truth. `catalog.json` is the bundled copy used by a cloned engine. After changing entries, run `bun scripts/build-catalog.ts`; the command validates the source before replacing the bundle.
 
 ## Run it
 

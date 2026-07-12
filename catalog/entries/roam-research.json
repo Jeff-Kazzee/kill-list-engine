@@ -1,0 +1,16 @@
+{
+  "slug": "roam-research",
+  "name": "Roam Research",
+  "aliases": ["Roam Research, Inc.", "Roam"],
+  "category": "notes-and-docs",
+  "typical_price_monthly": 15.00,
+  "price_basis": "advertised Pro plan billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: $180 a year for backlinks between text files. The graph is a folder plus grep.",
+  "what_zo_builds": "The graph exports as markdown and lands as files. A small indexer the agent writes recomputes the backlinks: every [[reference]] links both ways, rendered by a route with full text search and a daily notes page that creates itself. The outliner keystrokes go away. The thinking stays in files you own.",
+  "hours_to_build": 5,
+  "annual_savings": 180.00,
+  "dont_kill_if": "You live in the outliner and block references all day. For some people that workflow is the product, and no file tree fakes block level transclusion well.",
+  "build_brief": "Goal: replace Roam with markdown and a backlink index. Export my graph as markdown into /notes/import. Write an indexer that scans every [[wiki link]] and builds a backlinks map, then a route at /notes that renders each page with its linked references underneath. Add a daily note that creates itself on first visit each day, and full text search across everything. Done when I can open today's note, link to any page, and see the backlink appear on that page without Roam in the loop.",
+  "sources": ["https://roamresearch.com"]
+}

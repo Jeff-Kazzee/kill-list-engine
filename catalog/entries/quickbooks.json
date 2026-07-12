@@ -1,0 +1,16 @@
+{
+  "slug": "quickbooks",
+  "name": "QuickBooks",
+  "aliases": ["Intuit", "Intuit Inc."],
+  "category": "accounting",
+  "typical_price_monthly": 38.00,
+  "price_basis": "advertised Simple Start plan, checked 2026-07",
+  "verdict": "KEEP",
+  "verdict_reason": "KEEP: it files with the IRS. A rebuild bug is not a bug, it is an audit.",
+  "what_zo_builds": "Nothing that touches the books. Around it, Zo builds a receipts inbox where you forward invoices and it files PDFs by month, a pre-bookkeeping pass that categorizes your exported transaction CSV before your accountant sees it, and a quarterly automation that reminds you what estimated taxes are due. QuickBooks keeps the ledger, the payroll, and the legal surface. Zo kills the hours you spend feeding it.",
+  "hours_to_build": 60,
+  "annual_savings": 0,
+  "dont_kill_if": "There is no kill condition while real money and tax filings run through it. The honest question is whether a cheaper ledger fits your business, not whether an agent should do your books.",
+  "build_brief": "Goal: keep QuickBooks, cut the manual feeding. Create /finance/inbox and a rule: when I forward a receipt email or drop a PDF, file it as /finance/receipts/YYYY-MM/vendor-amount.pdf and log one line to receipts.csv. Each month I will export the QuickBooks transaction CSV; draft category suggestions in a review file I approve before anything goes back in. Add a quarterly automation reminding me of estimated tax deadlines two weeks ahead. Done when a month of receipts has filed itself and the first review file is approved.",
+  "sources": ["https://quickbooks.intuit.com/pricing/"]
+}

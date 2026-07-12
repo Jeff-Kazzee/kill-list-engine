@@ -156,6 +156,15 @@ describe("stampLedger", () => {
     expect(rows[0].verdict).toBeNull();
     expect(needs_judgment).toEqual(["Mystery Corp"]);
   });
+
+  test("malformed build hours are rejected as needing judgment", () => {
+    const rows = [sub({ merchant: "Mystery Corp", user_state: "confirmed" })];
+    const { needs_judgment } = stampLedger(rows, [], {
+      "mystery corp": { walls: {}, hours_to_build: -1 },
+    });
+    expect(rows[0].verdict).toBeNull();
+    expect(needs_judgment).toEqual(["Mystery Corp"]);
+  });
 });
 
 describe("bundleCatalog", () => {

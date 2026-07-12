@@ -1,0 +1,16 @@
+{
+  "slug": "make",
+  "name": "Make",
+  "aliases": ["Make.com", "Integromat"],
+  "category": "automation",
+  "typical_price_monthly": 9.00,
+  "price_basis": "advertised Core plan, 10,000 credits, billed annually, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: the same cron jobs and if statements as Zapier, sold by the credit instead of the task.",
+  "what_zo_builds": "Each scenario becomes a scheduled automation or a webhook route on your Zo. The visual modules become plain steps the agent writes once: read the trigger, transform the data, call the API. No credits metered per module action, no scenario caps, and the run log is a file you can actually read.",
+  "hours_to_build": 3,
+  "annual_savings": 108.00,
+  "dont_kill_if": "Your scenarios hit apps Zo cannot reach by integration or API, or a non-technical teammate maintains them and needs the visual editor. Then the editor is the product, not the plumbing.",
+  "build_brief": "Goal: move my Make scenarios onto you and cancel the plan. I will paste screenshots or the blueprint export of each scenario. For each trigger, create a scheduled automation that polls or a route that accepts the incoming webhook. Rebuild the module chain as plain steps using Gmail, Calendar, Drive, or direct HTTP calls. Log every run to /automations/log.md with status and duration. Done when each former scenario has fired successfully once from its real trigger and I have a table mapping old scenario to new automation.",
+  "sources": ["https://www.make.com/en/pricing"]
+}

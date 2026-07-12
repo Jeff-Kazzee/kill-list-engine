@@ -1,0 +1,15 @@
+{
+  "slug": "calendly",
+  "name": "Calendly",
+  "category": "scheduling",
+  "typical_price_monthly": 12.00,
+  "price_basis": "advertised Standard plan billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: a booking page is one route, one calendar check, and one confirmation email.",
+  "what_zo_builds": "One route at /book renders your open slots by reading Google Calendar free/busy. A form posts the pick, the route writes the event to the calendar, and an automation emails both sides a confirmation and a reminder the morning of. Buffer rules and working hours live in one small config file you edit directly.",
+  "hours_to_build": 5,
+  "annual_savings": 144.00,
+  "dont_kill_if": "Your booking flow collects payments, does round-robin routing across a sales team, or feeds a CRM your employer mandates. Money and teammates are both KEEP walls.",
+  "build_brief": "Goal: replace Calendly with a booking route on you. Connect my Google Calendar. Create a route at /book that reads free/busy for the next 14 days and shows 30 minute slots inside my working hours, with a 15 minute buffer after each meeting. On submit, create the calendar event with the visitor as guest and send us both a confirmation email. Add a morning automation that emails me the day's bookings. Done when a stranger can book a real slot and it lands on my calendar without me touching anything.",
+  "sources": ["https://calendly.com/pricing"]
+}

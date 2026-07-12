@@ -1,0 +1,16 @@
+{
+  "slug": "cal-com",
+  "name": "Cal.com",
+  "aliases": ["Cal.com, Inc.", "Cal com"],
+  "category": "scheduling",
+  "typical_price_monthly": 12.00,
+  "price_basis": "advertised Teams plan billed yearly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: the free plan already does it. Paying means renting a team seat for a team of one.",
+  "what_zo_builds": "The same booking route the Calendly kill gets: /book reads Google Calendar free/busy, shows your open slots, writes the event, and emails both sides. Cal.com's one real edge, running bookings on your own domain, is the default here because the route already lives on your own address.",
+  "hours_to_build": 4,
+  "annual_savings": 144.00,
+  "dont_kill_if": "You run round-robin or collective scheduling across a real team, or your employer pays for the Teams seat and shared event types. Teammates are a KEEP wall.",
+  "build_brief": "Goal: replace my Cal.com subscription with a booking route on you. Connect my Google Calendar. Create a route at /book that reads free/busy for the next 14 days and lists 30 minute slots inside my working hours, with a 15 minute buffer after each meeting. On submit, write the event with the visitor as guest and email us both a confirmation. Port my event types from Cal.com: I will paste them, keep the same durations and buffers. Done when every event type I had on Cal.com books correctly through the new route and lands on my calendar.",
+  "sources": ["https://cal.com/pricing"]
+}

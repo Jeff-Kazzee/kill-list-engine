@@ -1,0 +1,16 @@
+{
+  "slug": "otter-ai",
+  "name": "Otter.ai",
+  "aliases": ["Otter.ai, Inc.", "AISense"],
+  "category": "transcription",
+  "typical_price_monthly": 16.99,
+  "price_basis": "advertised Pro plan billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: transcription is a built-in Zo capability. You are paying rent on a feature.",
+  "what_zo_builds": "Drop a recording into /recordings and an automation transcribes it, writes a summary with action items to /notes/meetings, and files the audio away. Zo's transcription handles the same audio Otter does. Search across every transcript is the agent reading your own files. No per-minute quota, no separate app holding your meetings.",
+  "hours_to_build": 2,
+  "annual_savings": 203.88,
+  "dont_kill_if": "You need a live bot that joins Zoom or Meet calls in real time and shows captions to other participants while the meeting runs. Zo transcribes recordings, not live streams.",
+  "build_brief": "Goal: replace Otter with a transcription pipeline on you. Create a watched folder at /recordings. When a new audio or video file lands, transcribe it, then write a markdown note to /notes/meetings with the date, a five line summary, action items, and the full transcript below. Move the processed file to /recordings/done. Add a weekly automation that emails me a digest of the week's meetings. Done when I drop in a test recording and the finished note appears without me asking.",
+  "sources": ["https://otter.ai/pricing"]
+}

@@ -129,6 +129,8 @@ describe("bespokeReason", () => {
   test("hand-typed dollar amounts reject the whole line", () => {
     expect(bespokeReason("costs $15 a month for nothing", "KILL", 1500, 3)).toBeNull();
     expect(bespokeReason("costs $ 15", "KILL", 1500, 3)).toBeNull();
+    expect(bespokeReason("costs 15 dollars a month", "KILL", 1500, 3)).toBeNull();
+    expect(bespokeReason("takes 3 hours to replace", "KILL", 1500, 3)).toBeNull();
   });
 
   test("money tokens without a verified price reject; hours token survives", () => {
@@ -143,5 +145,6 @@ describe("bespokeReason", () => {
     expect(bespokeReason("   ", "KILL", 1000, 2)).toBeNull();
     expect(bespokeReason("two\nlines", "KILL", 1000, 2)).toBeNull();
     expect(bespokeReason("x".repeat(BESPOKE_MAX_LENGTH + 1), "KILL", 1000, 2)).toBeNull();
+    expect(bespokeReason("x".repeat(BESPOKE_MAX_LENGTH - 5), "KILL", 1000, 2)).toBeNull();
   });
 });

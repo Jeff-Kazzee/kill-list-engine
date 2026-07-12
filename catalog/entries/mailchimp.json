@@ -1,0 +1,16 @@
+{
+  "slug": "mailchimp",
+  "name": "Mailchimp",
+  "aliases": ["The Rocket Science Group", "Intuit Mailchimp"],
+  "category": "email-marketing",
+  "typical_price_monthly": 20.00,
+  "price_basis": "advertised Standard plan at 500 contacts, checked 2026-07",
+  "verdict": "TRIM",
+  "verdict_reason": "TRIM: keep the send pipes, fire the marketing suite. Essentials plus Zo does the rest.",
+  "what_zo_builds": "Zo replaces everything above the send button: it drafts campaigns in your voice from a content file, segments your audience from the subscriber CSV you export, schedules sends, and reads campaign reports back into plain markdown. Mailchimp keeps one job, deliverability, because warmed sending infrastructure is the part a rebuild can genuinely break. Drop from Standard at $20 to Essentials at $13 and stop paying for the journey builder.",
+  "hours_to_build": 8,
+  "annual_savings": 84.00,
+  "dont_kill_if": "You depend on Standard-only features like advanced journeys or send-time optimization to hit revenue targets, or your list is large enough that the tier math changes.",
+  "build_brief": "Goal: downgrade Mailchimp from Standard to Essentials and move the thinking to you. Export my audience CSV into /marketing/subscribers and keep it synced monthly. Create a campaign workflow: I write bullets in /marketing/queue, you draft the email in my voice, I approve, you load it into Mailchimp for the send. Add a monthly automation that pulls open and click stats into /marketing/reports.md. Done when one full campaign has shipped this way and my plan page shows Essentials.",
+  "sources": ["https://mailchimp.com/pricing/marketing/"]
+}

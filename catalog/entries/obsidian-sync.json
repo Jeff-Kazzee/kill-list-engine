@@ -1,0 +1,16 @@
+{
+  "slug": "obsidian-sync",
+  "name": "Obsidian Sync",
+  "aliases": ["Obsidian", "Dynalist Inc"],
+  "category": "storage",
+  "typical_price_monthly": 5.00,
+  "price_basis": "advertised Standard plan billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: $60 a year to copy markdown files between machines. That is rsync with a subscription.",
+  "what_zo_builds": "Your vault is a folder of markdown files, the one format every sync tool on earth already handles. Zo holds the canonical copy, a git repo gives you version history that beats Sync's, and each device pulls with the free Obsidian Git plugin. End to end encryption becomes simpler: it is your server.",
+  "hours_to_build": 2,
+  "annual_savings": 60.00,
+  "dont_kill_if": "You edit heavily on iOS and never want to think about a merge conflict. Obsidian Sync's mobile story is genuinely smoother than git on a phone, and five dollars for that sanity is a fair trade.",
+  "build_brief": "Goal: replace Obsidian Sync with a git backed vault on you. Create a private repo here for my vault and import the current copy. Write the Obsidian Git plugin config for my desktop and phone: pull on open, push on save, sensible conflict handling. Add an automation that commits the server copy hourly and snapshots the vault to Google Drive nightly. Write me a one page setup note per device. Done when an edit on my phone shows up on my laptop inside a minute and the git log shows every change.",
+  "sources": ["https://obsidian.md/sync"]
+}

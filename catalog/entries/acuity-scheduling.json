@@ -1,0 +1,16 @@
+{
+  "slug": "acuity-scheduling",
+  "name": "Acuity Scheduling",
+  "aliases": ["Acuity", "Acuity Scheduling LLC"],
+  "category": "scheduling",
+  "typical_price_monthly": 20.00,
+  "price_basis": "advertised Starter plan billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: $240 a year to show open slots and take a booking. One calendar read, one form.",
+  "what_zo_builds": "A booking route that reads your calendar, shows open slots per appointment type, and takes the booking. Intake questions become form fields the route stores with the event. Confirmations and reminders run as automations. Appointment types, durations, and padding live in one config file you edit directly.",
+  "hours_to_build": 8,
+  "annual_savings": 240.00,
+  "dont_kill_if": "Clients pay at booking through Stripe or Square inside Acuity, you route bookings across multiple staff calendars, or the scheduler is embedded in a Squarespace site the business runs on. Payments and staff routing are KEEP walls.",
+  "build_brief": "Goal: replace Acuity Scheduling with a booking route on you. Connect my Google Calendar. Create a route at /book with my appointment types, each with its own duration, padding, and intake questions. On submit, write the event, store the intake answers with it, and email the client a confirmation. Add a reminder email the day before at 9am and a morning summary of the day's appointments to me. Done when a client can pick a type, answer the intake questions, book a real slot, and both of us get the right emails without me touching anything.",
+  "sources": ["https://www.acuityscheduling.com/pricing"]
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "zapier",
+  "name": "Zapier",
+  "aliases": ["Zapier Inc", "Zapier, Inc."],
+  "category": "automation",
+  "typical_price_monthly": 29.99,
+  "price_basis": "advertised Professional plan, 750 tasks, billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: you are paying $360 a year for cron jobs and if statements.",
+  "what_zo_builds": "Each Zap becomes a scheduled automation on your Zo. Triggers that watched Gmail or webhooks become automations that read Gmail directly, or routes that accept the incoming webhook. The glue code between steps is code the agent writes once and you own. No task quotas, no per-step pricing, no editor UI you visit twice a year.",
+  "hours_to_build": 3,
+  "annual_savings": 359.88,
+  "dont_kill_if": "You run Zaps against apps Zo has no integration or API access for, or a non-technical teammate maintains the workflows and needs the visual editor to do it.",
+  "build_brief": "Goal: move my Zapier workflows onto you and cancel the plan. I will paste an export or screenshots of each Zap. For every trigger, create either a scheduled automation that polls, or a route that accepts the incoming webhook. Rebuild each action step with the matching integration: Gmail, Calendar, Drive, or a plain HTTP call. Log every run to /automations/log.md. Done when each former Zap has fired successfully once from its real trigger and I have a table mapping old Zap to new automation.",
+  "sources": ["https://zapier.com/pricing"]
+}

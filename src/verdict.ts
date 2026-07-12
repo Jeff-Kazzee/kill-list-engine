@@ -60,6 +60,8 @@ export function rubricVerdict(
 
 export const BESPOKE_MAX_LENGTH = 120;
 
+const MODEL_WRITTEN_NUMBER = /(?:\$\s*\d|\b\d+(?:[.,]\d+)?\s*(?:dollars?|bucks?|usd|hours?|hrs?|minutes?|mins?|days?|weeks?|months?|years?|\/\s*(?:mo|month|yr|year))\b)/i;
+
 // A bespoke reason line written by the user's Zo for a non-catalog merchant.
 // The verdict word is stamped here, never by the model, so the line cannot
 // disagree with the rubric. Number tokens {mo} {yr} {hrs} are interpolated
@@ -73,15 +75,16 @@ export function bespokeReason(
 ): string | null {
   if (!raw) return null;
   const line = raw.trim();
-  if (!line || /[\r\n]/.test(line) || line.length > BESPOKE_MAX_LENGTH) return null;
-  if (/\$\s*\d/.test(line)) return null;
+  if (!line || /[\r\n]/.test(line)) return null;
+  if (MODEL_WRITTEN_NUMBER.test(line)) return null;
   if (monthlyCents === null && /\{(mo|yr)\}/.test(line)) return null;
   const filled = line
     .replaceAll("{mo}", monthlyCents === null ? "" : `${formatUSD(monthlyCents)}/mo`)
     .replaceAll("{yr}", monthlyCents === null ? "" : `${formatUSD(monthlyCents * 12)}/yr`)
     .replaceAll("{hrs}", String(Math.max(1, Math.round(hoursToBuild))));
   const cleaned = filled.replace(/^(KILL|KEEP|TRIM)\s*:\s*/i, "");
-  return `${verdict}: ${cleaned}`;
+  const stamped = `${verdict}: ${cleaned}`;
+  return stamped.length <= BESPOKE_MAX_LENGTH ? stamped : null;
 }
 
 export function catalogVerdict(entry: CatalogEntry): VerdictResult {

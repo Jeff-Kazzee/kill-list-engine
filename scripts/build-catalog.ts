@@ -6,7 +6,7 @@ import { join } from "node:path";
 import type { CatalogEntry } from "../src/types.ts";
 
 const ROOT = join(import.meta.dir, "..");
-const SRC = process.env.KILL_LIST_CATALOG_SRC ?? join(ROOT, "..", "catalog", "entries");
+const SRC = process.env.KILL_LIST_CATALOG_SRC ?? join(ROOT, "catalog", "entries");
 
 const REQUIRED: (keyof CatalogEntry)[] = [
   "slug",

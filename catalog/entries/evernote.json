@@ -1,0 +1,19 @@
+{
+  "slug": "evernote",
+  "name": "Evernote",
+  "aliases": ["Evernote Corporation"],
+  "category": "notes-and-docs",
+  "typical_price_monthly": 14.99,
+  "price_basis": "advertised Starter plan billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: the cheap plan caps you at 1,000 notes and the old plans quietly renew at $24.99. Leave.",
+  "what_zo_builds": "Your notes come out through the export and land as files you own: markdown with attachments beside it, notebooks as folders, tags as front matter. A route renders everything with full text search, a small bookmarklet replaces the web clipper, and a nightly automation backs the whole tree up to Drive.",
+  "hours_to_build": 6,
+  "annual_savings": 179.88,
+  "dont_kill_if": "Years of scanned PDFs and handwriting live in there and you search inside them daily. Evernote's OCR across old scans is genuinely hard to replace. Test the export on one notebook before you swing.",
+  "build_brief": "Goal: replace Evernote with files and one route. I will run the Evernote export and put the .enex files in /notes/import. Convert every note to markdown with its attachments beside it, one folder per notebook, tags as front matter. Create a route at /notes that lists and renders everything with full text search. Add a bookmarklet that posts a page's title, URL, and selected text into /notes/inbox as a new note. Snapshot /notes to Google Drive nightly. Done when a search for any old note returns it in under five seconds and nothing links back to evernote.com.",
+  "sources": [
+    "https://help.evernote.com/hc/en-us/articles/46317642175763-Discontinuing-Evernote-Personal-Professional-Introducing-Starter-Advanced-FAQ",
+    "https://evernote.com/compare-plans"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "slug": "n8n-cloud",
+  "name": "n8n Cloud",
+  "aliases": ["n8n", "n8n GmbH"],
+  "category": "automation",
+  "typical_price_monthly": 20.00,
+  "price_basis": "advertised Starter plan billed annually, EUR 20 on the page, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: paying rent to run an open source app. Your Zo is the server.",
+  "what_zo_builds": "n8n is open source. Zo installs the Community Edition right here, or skips the app entirely and rewrites the workflows as plain automations. Either way executions stop being metered, the data never visits a third party cloud, and the server bill is one you already pay.",
+  "hours_to_build": 2,
+  "annual_savings": 240.00,
+  "dont_kill_if": "A team shares the instance and needs the SSO, projects, and collaboration features the cloud tiers gate, or your workflows page customers when they fail and you want n8n on the hook for uptime instead of you.",
+  "build_brief": "Goal: get me off n8n Cloud without losing a workflow. Export every workflow from my cloud account first. Then show me two options sized in hours before you start: one, install n8n Community Edition on this machine, import the exports, and put the editor behind a private route; two, rebuild the workflows as plain scheduled automations and retire the app. Done when every workflow runs here on schedule, executions are unmetered, and the cloud subscription has nothing left running on it.",
+  "sources": ["https://n8n.io/pricing"]
+}

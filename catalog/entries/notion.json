@@ -1,0 +1,16 @@
+{
+  "slug": "notion",
+  "name": "Notion",
+  "aliases": ["Notion Labs", "Notion Labs, Inc."],
+  "category": "notes-and-docs",
+  "typical_price_monthly": 12.00,
+  "price_basis": "advertised Plus plan billed monthly, checked 2026-07",
+  "verdict": "KILL",
+  "verdict_reason": "KILL: your notes are markdown files with a database bolted on. Zo already has both.",
+  "what_zo_builds": "A folder of markdown files replaces the pages. Zo hosts a route that renders them as a wiki with full text search. Tables become JSON or SQLite files the agent queries in plain English. A nightly automation backs the whole tree up to Drive. Export from Notion once, import once, done.",
+  "hours_to_build": 6,
+  "annual_savings": 144.00,
+  "dont_kill_if": "You share a workspace with teammates or clients who edit pages. The moment a second person needs live access, the network wall applies and this becomes a KEEP.",
+  "build_brief": "Goal: replace Notion with files and one route. Export my Notion workspace as Markdown and CSV, put the archive in /notes/import and unpack it. Create a route at /notes that lists and renders every markdown file with full text search. Convert each CSV database into a JSON file next to its pages. Add a nightly automation that snapshots /notes to Google Drive. Done when I can find any note by search in under five seconds and nothing links back to notion.so.",
+  "sources": ["https://www.notion.com/pricing"]
+}

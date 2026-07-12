@@ -1,0 +1,16 @@
+{
+  "slug": "dropbox",
+  "name": "Dropbox",
+  "aliases": ["Dropbox, Inc.", "Dropbox International"],
+  "category": "storage",
+  "typical_price_monthly": 11.99,
+  "price_basis": "advertised Plus plan billed monthly, checked 2026-07",
+  "verdict": "KEEP",
+  "verdict_reason": "KEEP: 2TB of synced storage is a storage bill, not a workflow. Zo is not a hard drive.",
+  "what_zo_builds": "Around it, not instead of it. Zo connects to your files and becomes the thing Dropbox never was: an agent that finds the contract from March, renames the mess in /scans, and builds a route that shares a folder as a clean gallery. The storage stays where it is. What dies is the idea that you need Dropbox's paid AI and doc tools, because an agent reading your files already does that.",
+  "hours_to_build": 25,
+  "annual_savings": 0,
+  "dont_kill_if": "The KEEP holds while you need live sync across devices. If your 2TB is mostly cold archive, a one-time move to a cheaper object store or a local drive kills the bill.",
+  "build_brief": "Goal: keep Dropbox, make it earn the fee. Connect to my Dropbox. Build an index of every folder over 1GB and a report of duplicates and dead weight in /reports/storage.md. Add a monthly automation that re-runs the audit and emails me what grew. Create a rule that when I ask you to find a file, you search Dropbox and my Zo files together. Done when the first audit report lands and I have deleted enough junk to see the usage number drop.",
+  "sources": ["https://www.dropbox.com/plans"]
+}
