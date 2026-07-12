@@ -109,6 +109,29 @@
     ]
   },
   {
+    "slug": "bitly",
+    "name": "Bitly",
+    "aliases": [
+      "Bitly",
+      "Bit.ly",
+      "Bitly, Inc.",
+      "BITLY INC"
+    ],
+    "category": "url-shortener",
+    "typical_price_monthly": 10,
+    "price_basis": "Core at $10 per month sold as a $120 annual charge, annual plan only, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $120 a year renting short links. A redirect is one route and a JSON map on a domain you own.",
+    "what_zo_builds": "A link shortener on your own domain: one redirect route, a JSON map of slugs to destinations, and a click log you can actually query. QR codes generate at create time. No monthly link meter, and your links stop depending on someone else's domain reputation to survive spam filters.",
+    "hours_to_build": 3,
+    "annual_savings": 120,
+    "dont_kill_if": "Marketing runs on Bitly's campaign analytics across a team, or thousands of printed QR codes already point at bit.ly URLs you cannot reprint.",
+    "build_brief": "Goal: replace Bitly Core with short links on a domain I own. Export my existing Bitly links and click counts. Create a redirect route backed by a JSON slug map, import the old links, and add a create endpoint that returns a short URL and a QR code. Log clicks with timestamp and referrer to a file I can query. Update the links I control to the new domain and let legacy bit.ly links age out. Done when new links ship from my domain and the annual charge is canceled.",
+    "sources": [
+      "https://bitly.com/pages/pricing"
+    ]
+  },
+  {
     "slug": "bitwarden-premium",
     "name": "Bitwarden Premium",
     "aliases": [
@@ -152,6 +175,29 @@
     "build_brief": "Goal: keep Box for client-facing sharing but stop it from silently becoming my only copy. Export a file inventory, mirror final deliverables into /clients in my workspace, and record which shared links still get opened. Create a quarterly automation that flags links dead for 180 days and folders with no outside activity. If a full year passes with no external opens, prepare the export-and-cancel checklist. Done when every deliverable has a local mirror and the renewal decision has usage data behind it.",
     "sources": [
       "https://www.box.com/pricing/individual"
+    ]
+  },
+  {
+    "slug": "buffer",
+    "name": "Buffer",
+    "aliases": [
+      "Buffer",
+      "Buffer Inc",
+      "Buffer.com",
+      "BUFFER PUBLISH"
+    ],
+    "category": "social-scheduling",
+    "typical_price_monthly": 20,
+    "price_basis": "Essentials at $5 per channel per month billed yearly, $60 per channel per year; basis is 4 connected channels at $20 per month, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $240 a year to queue posts. A scheduler is a cron job and a queue file on a machine you already own.",
+    "what_zo_builds": "A posting queue you own: one plain text queue file per channel, a cron job that publishes at the times you pick, and a weekly report of what went out and what is coming. Editing the schedule is editing a file. Zo posts to X directly today; other networks run through their official APIs where they allow it, and the queue file stays the single source of truth either way. Buffer's own free tier already covers 3 channels, so the paid plan is buying you a meter.",
+    "hours_to_build": 8,
+    "annual_savings": 240,
+    "dont_kill_if": "You schedule for clients with approval workflows, or your business lives on Instagram and TikTok, where API posting is gated and an official partner tool earns its fee.",
+    "build_brief": "Goal: replace my paid Buffer with a posting queue I own. Export my scheduled posts and connected channels from Buffer. Create one queue file per channel with post text, media paths, and send times. Set up a cron job that publishes each due post through the channel's API and logs the result. Add a weekly digest of published and upcoming posts. Run both systems in parallel for one week, compare what shipped, then cancel the plan. Done when a week of posts ships from my queue with zero misses and Buffer is canceled.",
+    "sources": [
+      "https://buffer.com/pricing"
     ]
   },
   {
@@ -325,6 +371,29 @@
     ]
   },
   {
+    "slug": "docusign",
+    "name": "Docusign",
+    "aliases": [
+      "Docusign",
+      "DocuSign",
+      "DocuSign Inc.",
+      "Docusign, Inc."
+    ],
+    "category": "e-sign",
+    "typical_price_monthly": 11,
+    "price_basis": "Personal eSignature at $11 per month as a $132 annual commitment, checked 2026-07",
+    "verdict": "KEEP",
+    "verdict_reason": "KEEP: a signature has to stand up in court. Legal standing is a wall no weekend build climbs over.",
+    "what_zo_builds": "The filing system around the signatures: Zo archives every completed envelope into your workspace with parties, dates, and a searchable index, tracks envelope usage against the Personal plan's five per month, and flags renewal time with real numbers. What it does not do is pretend a homemade signing page carries the same weight with a counterparty's lawyers.",
+    "hours_to_build": 20,
+    "annual_savings": 0,
+    "dont_kill_if": "The one honest exit: you sign fewer than five low-stakes documents a year and your counterparties accept simpler tools. Then free tiers cover you and Personal is rent.",
+    "build_brief": "Goal: keep Docusign for legal standing but own my agreement archive. Pull every completed envelope with its certificate of completion into /contracts, indexed by party, date, and renewal terms. Track envelope usage against the five-per-month Personal allowance and flag months that approach it. Add a yearly review that lists what was signed and what the plan cost. Done when every agreement lives in my archive with its audit certificate and the renewal decision has usage data behind it.",
+    "sources": [
+      "https://www.docusign.com/products-and-pricing"
+    ]
+  },
+  {
     "slug": "dropbox",
     "name": "Dropbox",
     "aliases": [
@@ -364,6 +433,29 @@
     "sources": [
       "https://help.evernote.com/hc/en-us/articles/46317642175763-Discontinuing-Evernote-Personal-Professional-Introducing-Starter-Advanced-FAQ",
       "https://evernote.com/compare-plans"
+    ]
+  },
+  {
+    "slug": "feedly-pro",
+    "name": "Feedly Pro",
+    "aliases": [
+      "Feedly",
+      "Feedly Pro",
+      "Feedly Inc.",
+      "feedly.com"
+    ],
+    "category": "rss",
+    "typical_price_monthly": 6,
+    "price_basis": "Pro at $6 per month billed annually, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $72 a year to read free XML. Zo polls your feeds, dedupes the overlap, and hands you a morning brief.",
+    "what_zo_builds": "An RSS reader shaped like a briefing: Zo polls your feeds on a schedule, dedupes stories that show up in five places at once, filters noise by rules you write in plain language, and delivers a morning digest with links back to the sources. A thousand feeds is a config file, not a paid tier.",
+    "hours_to_build": 5,
+    "annual_savings": 72,
+    "dont_kill_if": "Your team runs shared boards and newsletters out of Feedly, or the AI filtering across thousands of sources is part of your job. The solo reading case is what dies here.",
+    "build_brief": "Goal: replace Feedly Pro with a feed pipeline I own. Export my OPML from Feedly. Set up a scheduled pull that fetches every feed, dedupes stories that appear in multiple sources, and applies my mute rules. Render a morning digest note with the day's items grouped by topic, plus a weekly roundup of what got filtered so I can tune the rules. Run alongside Feedly for a week to confirm nothing important slips through. Done when the digest arrives daily, the mute rules hold, and the plan is canceled.",
+    "sources": [
+      "https://feedly.com/i/pro"
     ]
   },
   {
@@ -407,6 +499,29 @@
     "build_brief": "Goal: replace Grammarly with an editing pass on you. Create /writing/style.md and I will fill in my voice rules. Add a rule: when I save a draft under /writing, produce draft.edited.md with grammar and clarity fixes that keep my voice, plus a short list of what changed and why. Create a private route at /proof where I paste text and get the corrected version back with changes marked. Done when I paste a rough paragraph and the output needs no second pass.",
     "sources": [
       "https://www.grammarly.com/plans"
+    ]
+  },
+  {
+    "slug": "hootsuite",
+    "name": "Hootsuite",
+    "aliases": [
+      "Hootsuite",
+      "HootSuite",
+      "Hootsuite Inc.",
+      "Hootsuite Media Inc."
+    ],
+    "category": "social-scheduling",
+    "typical_price_monthly": 99,
+    "price_basis": "Standard at $99 per user per month based on annual billing, one seat, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $1,188 a year for one seat. Enterprise rent for scheduling posts a cron job sends for free.",
+    "what_zo_builds": "The same queue build that replaces Buffer, minus the enterprise chrome: per-channel queue files, a cron publisher, a log of every post, and a weekly digest. Basic stats come straight from each platform's own endpoints into one report you actually read. No seats, no per-user math, no dashboard rent.",
+    "hours_to_build": 8,
+    "annual_savings": 1188,
+    "dont_kill_if": "A team shares the calendar with approval chains, or you run paid social and community inboxes across brands. That workflow is what the seat price is for.",
+    "build_brief": "Goal: replace my Hootsuite seat with a scheduler I own. Export scheduled posts, connected accounts, and saved drafts. Build per-channel queue files and a cron publisher that posts through each platform's API and records results. Pull basic per-post stats from the platforms into a weekly report. Parallel-run for two weeks, since the price is steep and the workflows are stickier, then cancel the seat. Done when every queued post ships on time from my own queue and the $99 seat is gone.",
+    "sources": [
+      "https://www.hootsuite.com/plans"
     ]
   },
   {
@@ -477,6 +592,29 @@
     ]
   },
   {
+    "slug": "later",
+    "name": "Later",
+    "aliases": [
+      "Later",
+      "Later.com",
+      "Later Media",
+      "Latergramme"
+    ],
+    "category": "social-scheduling",
+    "typical_price_monthly": 25,
+    "price_basis": "Starter at $25 monthly billing, $18.75 per month billed yearly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $300 a year to post on time. Zo runs the same queue from a file you edit and never meters your posts.",
+    "what_zo_builds": "A visual-first queue: a folder of media with captions and send times in front matter, a cron publisher, and a preview page that renders the upcoming grid before anything ships. Rescheduling is cut and paste in a file, not a paywalled calendar, and there is no per-post meter deciding when your month is over.",
+    "hours_to_build": 7,
+    "annual_savings": 300,
+    "dont_kill_if": "Instagram is your storefront and you depend on Later's link in bio page and auto-publish partnerships. Rebuilding those pieces has real friction on Meta's side of the fence.",
+    "build_brief": "Goal: replace my Later Starter plan with a media queue I own. Export upcoming posts, captions, and media. Create a /queue folder where each post is a media file plus a caption and send time. Build the cron publisher and a preview route that renders the upcoming grid so I can check the week at a glance. Ship a week of posts in parallel with Later, verify timing and formatting, then cancel. Done when the grid preview matches what actually posts and the $25 charge stops.",
+    "sources": [
+      "https://later.com/pricing/"
+    ]
+  },
+  {
     "slug": "linktree",
     "name": "Linktree",
     "category": "link-in-bio",
@@ -491,6 +629,29 @@
     "build_brief": "Goal: replace my Linktree with a page you host. I will paste my current list of links and titles. Create /links as a single clean mobile-first page reading from links.json, dark background, one column of buttons. Add a /go/:id redirect route that appends each click to clicks.log before forwarding, and a private /links/stats route that totals the log by link. Done when the page loads fast on my phone, every link works, and I have updated my social bios to the new URL.",
     "sources": [
       "https://linktr.ee/s/pricing"
+    ]
+  },
+  {
+    "slug": "loom",
+    "name": "Loom",
+    "aliases": [
+      "Loom",
+      "Loom, Inc.",
+      "useloom.com",
+      "Atlassian Loom"
+    ],
+    "category": "screen-recording",
+    "typical_price_monthly": 18,
+    "price_basis": "Business at $18 per user per month on monthly billing; free Starter caps at 25 videos of 5 minutes, checked 2026-07",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: free Loom records 25 videos. Zo hosts the archive so the cap never bites. Drop the $18 seat.",
+    "what_zo_builds": "A video archive that makes the free plan enough: Zo pulls your existing Looms, stores them in your workspace, transcribes every video so old walkthroughs are searchable, and serves a /videos route with share links and view counts. New quick takes still record in free Loom; when you near the 25-video cap, the oldest move to your archive, so the meter never charges you rent.",
+    "hours_to_build": 6,
+    "annual_savings": 216,
+    "dont_kill_if": "Your team lives in Loom with SSO, engagement analytics, and video CTAs wired into sales workflows. One person downgrading does not move a team plan anyway.",
+    "build_brief": "Goal: drop my Loom Business seat to the free plan without losing a single video. Download my full Loom library, store it under /videos with dates and titles, and transcribe everything so old recordings are searchable. Build a share route with clean URLs and a view counter. Set an automation that watches the free plan's 25-video cap and archives the oldest recordings before it bites. Done when every old link has a working replacement and the seat is downgraded to free.",
+    "sources": [
+      "https://www.loom.com/pricing"
     ]
   },
   {
@@ -685,6 +846,53 @@
     ]
   },
   {
+    "slug": "raindrop-pro",
+    "name": "Raindrop Pro",
+    "aliases": [
+      "Raindrop.io",
+      "Raindrop",
+      "PADDLE.NET* RAINDROP",
+      "Rustem Mussabekov"
+    ],
+    "category": "bookmarks",
+    "typical_price_monthly": 2.99,
+    "price_basis": "Pro at $2.99 monthly or $27.99 yearly, from the official App Store listing because raindrop.io renders prices in-app only, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: barely $3 a month, but saving pages with full text search is native Zo behavior. You own this already.",
+    "what_zo_builds": "A permanent bookmark library: a save route that fetches the page, stores a full copy in your workspace, tags it, and indexes every word for search. Collections are folders. A monthly job flags dead links. This is the rare kill where Zo is not imitating the product; page capture and full text search are things it does out of the box.",
+    "hours_to_build": 4,
+    "annual_savings": 35.88,
+    "dont_kill_if": "You share curated collections publicly or with a team and those inbound links have an audience. A personal archive does not replace a published collection page.",
+    "build_brief": "Goal: replace Raindrop Pro with a bookmark archive I own. Export all bookmarks with tags and collections. Import them into /bookmarks as folders, fetch a permanent copy of every saved page, and index the text for search. Add a save route for new links and a monthly job that flags dead URLs. Spot-check search against Raindrop on the same queries before switching. Done when every bookmark resolves to a local copy, search finds pages by their content, and the subscription is canceled.",
+    "sources": [
+      "https://apps.apple.com/us/app/raindrop-io/id1021913807",
+      "https://raindrop.io/pro/buy"
+    ]
+  },
+  {
+    "slug": "readwise",
+    "name": "Readwise",
+    "aliases": [
+      "Readwise",
+      "Readwise LLC",
+      "Readwise Reader",
+      "Readwise.io"
+    ],
+    "category": "bookmarks",
+    "typical_price_monthly": 9.99,
+    "price_basis": "Full at $9.99 per month billed annually ($12.99 monthly); Lite at $5.59 per month billed annually, checked 2026-07",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: keep the Kindle highlight sync on Lite at $5.59. Zo is the reading queue. $52.80 a year back.",
+    "what_zo_builds": "The reading half of Readwise: a save-to-workspace flow for articles, an RSS pull for the feeds you follow, and a daily note that quotes your own highlights back to you. The Kindle and Kobo highlight sync stays on the Lite plan, because that plumbing is genuinely theirs. Zo replaces the Reader app, not the sync.",
+    "hours_to_build": 5,
+    "annual_savings": 52.8,
+    "dont_kill_if": "Reader is your single reading surface across newsletters, PDFs, and YouTube, and the daily review drives real retention practice. Then the Full plan is the product, not a bundle.",
+    "build_brief": "Goal: downgrade Readwise Full to Lite and let Zo be the reading queue. Export my Reader library and feeds. Point the feeds at a Zo RSS pull, add a save route for new articles, and store full text in the workspace. Build a daily note that resurfaces a handful of my own highlights, mirroring the review habit. Keep Lite for Kindle highlight sync. Run it for two weeks, then downgrade. Done when saving, reading, and daily review all happen in my workspace and the plan shows Lite.",
+    "sources": [
+      "https://readwise.io/pricing"
+    ]
+  },
+  {
     "slug": "roam-research",
     "name": "Roam Research",
     "aliases": [
@@ -746,6 +954,28 @@
     "build_brief": "Goal: drop my Squarespace plan from Core to Basic without losing what Core added. List which Core features the site actually used in the last quarter: analytics depth, premium integrations, customer accounts, commerce volume. Rebuild the analytics as a weekly report automation from site exports, move lead forms to routes on my Zo, and confirm nothing sold recently needs Core checkout terms. Downgrade at the end of the billing cycle. Done when the site runs on Basic for a full month with nothing missing.",
     "sources": [
       "https://www.squarespace.com/pricing"
+    ]
+  },
+  {
+    "slug": "superhuman",
+    "name": "Superhuman",
+    "aliases": [
+      "Superhuman",
+      "Superhuman Mail",
+      "Superhuman Labs Inc."
+    ],
+    "category": "email",
+    "typical_price_monthly": 25,
+    "price_basis": "Starter at $25 per user per month with annual billing, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $300 a year for speed on top of Gmail. Zo triages, drafts, and briefs the same inbox at no new cost.",
+    "what_zo_builds": "Inbox speed without the seat: Zo connects to your Gmail, triages new mail into the split views you define, drafts replies in your voice for the routine threads, surfaces the two or three messages that actually need you, and sends a morning inbox brief. Keyboard shortcuts were never the product; leaving your inbox lighter was.",
+    "hours_to_build": 6,
+    "annual_savings": 300,
+    "dont_kill_if": "The team features are the point for you: shared conversations, sales integrations, and read statuses across a group of senders. The solo speed upgrade is the version that dies.",
+    "build_brief": "Goal: cancel Superhuman and get the same inbox velocity from Zo on top of Gmail. Define my split views and triage rules. Set an automation that labels and sorts new mail, drafts replies for routine categories in my voice, and flags the few threads needing a real decision. Add a morning brief listing what arrived, what was handled, and what waits. Run for two weeks against my current flow. Done when I stop opening the paid client and the subscription is canceled.",
+    "sources": [
+      "https://superhuman.com/pricing"
     ]
   },
   {
