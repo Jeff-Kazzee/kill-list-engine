@@ -49,7 +49,7 @@
       "Beacons, Inc.",
       "beacons.ai"
     ],
-    "category": "link in bio",
+    "category": "link-in-bio",
     "typical_price_monthly": 8.33,
     "price_basis": "Creator plan billed $100 annually, represented as $8.33 monthly after cent rounding, checked 2026-07",
     "verdict": "KILL",
@@ -71,7 +71,7 @@
       "Beehiiv Scale",
       "Beehiiv"
     ],
-    "category": "email marketing",
+    "category": "email-marketing",
     "typical_price_monthly": 43,
     "price_basis": "Scale plan at the entry subscriber tier, monthly price shown on official pricing page, checked 2026-07",
     "verdict": "TRIM",
@@ -94,7 +94,7 @@
       "BioLink",
       "bio link"
     ],
-    "category": "link in bio",
+    "category": "link-in-bio",
     "typical_price_monthly": 5.99,
     "price_basis": "Pro monthly plan price shown at checkout, checked 2026-07",
     "verdict": "KILL",
@@ -132,6 +132,29 @@
     ]
   },
   {
+    "slug": "box",
+    "name": "Box",
+    "aliases": [
+      "Box",
+      "Box.com",
+      "Box Inc.",
+      "Box Personal Pro"
+    ],
+    "category": "storage",
+    "typical_price_monthly": 12,
+    "price_basis": "Personal Pro at EUR 12 monthly billing (pricing page serves euro-localized prices), checked 2026-07",
+    "verdict": "KEEP",
+    "verdict_reason": "KEEP: clients open your Box links and sign your files. Shared surfaces are a wall, not a subscription.",
+    "what_zo_builds": "Zo builds the cleanup crew around Box: an automation that lists stale shared links and their last-open dates, a quarterly report of what actually gets downloaded, and a workspace mirror of final deliverables so your own copy never depends on a vendor. It should not become the place a client is asked to fetch a contract.",
+    "hours_to_build": 30,
+    "annual_savings": 0,
+    "dont_kill_if": "Keep it while outsiders touch it. If nothing has been shared in a year and Box is just cold storage for you alone, export everything and cancel; that is the one honest exit.",
+    "build_brief": "Goal: keep Box for client-facing sharing but stop it from silently becoming my only copy. Export a file inventory, mirror final deliverables into /clients in my workspace, and record which shared links still get opened. Create a quarterly automation that flags links dead for 180 days and folders with no outside activity. If a full year passes with no external opens, prepare the export-and-cancel checklist. Done when every deliverable has a local mirror and the renewal decision has usage data behind it.",
+    "sources": [
+      "https://www.box.com/pricing/individual"
+    ]
+  },
+  {
     "slug": "buttondown",
     "name": "Buttondown",
     "aliases": [
@@ -139,7 +162,7 @@
       "Buttondown Email",
       "buttondown.email"
     ],
-    "category": "email marketing",
+    "category": "email-marketing",
     "typical_price_monthly": 9,
     "price_basis": "one paid feature add-on, such as analytics or segmentation, checked 2026-07; core service is free through 100 subscribers",
     "verdict": "TRIM",
@@ -189,6 +212,29 @@
     "build_brief": "Goal: replace Calendly with a booking route on you. Connect my Google Calendar. Create a route at /book that reads free/busy for the next 14 days and shows 30 minute slots inside my working hours, with a 15 minute buffer after each meeting. On submit, create the calendar event with the visitor as guest and send us both a confirmation email. Add a morning automation that emails me the day's bookings. Done when a stranger can book a real slot and it lands on my calendar without me touching anything.",
     "sources": [
       "https://calendly.com/pricing"
+    ]
+  },
+  {
+    "slug": "canva-pro",
+    "name": "Canva Pro",
+    "aliases": [
+      "Canva",
+      "Canva Pro",
+      "Canva Pty Ltd",
+      "Canva.com"
+    ],
+    "category": "design",
+    "typical_price_monthly": 12,
+    "price_basis": "Pro at US$144 billed yearly, normalized monthly, checked 2026-07",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: the editor rides free. You are paying $144 a year for AI features your server already has.",
+    "what_zo_builds": "Zo generates and edits images on demand, resizes and converts formats, strips backgrounds, and files brand assets in a /brand folder with your colors, fonts, and logo variants so every asset request starts from the same kit. The Canva editor itself stays in your life on the free plan; what leaves is the subscription that mostly bills you for AI credits and premium stock you rarely open.",
+    "hours_to_build": 6,
+    "annual_savings": 144,
+    "dont_kill_if": "A team shares brand kits and scheduled social content through your Pro seat, or you pull premium stock weekly. Licensed stock at volume is cheaper bundled than bought per image.",
+    "build_brief": "Goal: downgrade Canva to the free plan and route design work through my own tools. Create /brand with logo files, hex colors, and font names. Test Zo on my five most common asset types: social cards, thumbnails, banners, simple edits, background removal. Save a reusable prompt template for each. Export anything stored only in Canva. Run two weeks on the free editor plus Zo for generation. Done when no asset request needed Pro and the plan is downgraded.",
+    "sources": [
+      "https://www.canva.com/pricing/"
     ]
   },
   {
@@ -242,7 +288,7 @@
       "CTCT",
       "ConstantContact"
     ],
-    "category": "email marketing",
+    "category": "email-marketing",
     "typical_price_monthly": 12,
     "price_basis": "Lite plan starting price, monthly, varies with contacts and sends, checked 2026-07",
     "verdict": "KILL",
@@ -254,6 +300,28 @@
     "build_brief": "Goal: replace Constant Contact Lite while preserving lawful, reliable delivery. Export contacts, consent dates, unsubscribes, templates, campaigns, and reports. Build /email on Zo for signup forms, drafting, scheduling, one welcome sequence, and campaign history. Connect a bulk-email API and process bounces, complaints, and unsubscribes. Done when a seeded test list completes signup, welcome, broadcast, unsubscribe, and suppression without exposing subscriber data publicly.",
     "sources": [
       "https://www.constantcontact.com/pricing"
+    ]
+  },
+  {
+    "slug": "dashlane",
+    "name": "Dashlane",
+    "aliases": [
+      "Dashlane",
+      "Dashlane Inc.",
+      "Dashlane Premium"
+    ],
+    "category": "passwords",
+    "typical_price_monthly": 5.42,
+    "price_basis": "Premium at $5.42 per month billed annually ($65.04 per year), checked 2026-07",
+    "verdict": "KEEP",
+    "verdict_reason": "KEEP: the failure mode is losing every account you own. $65 a year is cheap insurance.",
+    "what_zo_builds": "Zo audits the subscription around the vault: it lists the devices and browsers you actually use, tracks whether the bundled VPN ever gets turned on, and files a reminder before renewal so the price gets a yearly review. It should not replace autofill, encrypted sync, or dark web monitoring with homemade scripts.",
+    "hours_to_build": 40,
+    "annual_savings": 0,
+    "dont_kill_if": "Keep it, or move to a cheaper manager with a deliberate, tested migration. The one wrong answer is exporting your vault to a spreadsheet on principle. If you never touch the VPN or dark web alerts, Bitwarden Premium does the core job for $19.80 a year.",
+    "build_brief": "Goal: decide whether Dashlane Premium earns its renewal without weakening my account security. Inventory which Premium features I used in the last 90 days: VPN, dark web monitoring, secure sharing. Verify export works and restore a test entry into a second manager before any switch. Create a private note with the findings and an automation that reminds me 30 days before renewal. Never ingest vault contents into workspace files. Done when the renewal decision is written down and recovery is proven.",
+    "sources": [
+      "https://www.dashlane.com/pricing-personal"
     ]
   },
   {
@@ -299,6 +367,29 @@
     ]
   },
   {
+    "slug": "google-one",
+    "name": "Google One",
+    "aliases": [
+      "Google One",
+      "GOOGLE *One",
+      "Google AI Plus",
+      "Google Storage"
+    ],
+    "category": "storage",
+    "typical_price_monthly": 9.99,
+    "price_basis": "Google AI Plus with 2TB at $9.99 monthly; Basic 100GB is $1.99, checked 2026-07",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: paying for 2TB to store a few hundred gigabytes. Drop to $1.99 and let Zo hold the archives.",
+    "what_zo_builds": "An archive pipeline, not a Google replacement. Zo connects to Drive, finds the old project folders and video files that pad your quota, moves them into dated workspace archives, and writes an index file so you can still find everything. A monthly automation reports current Drive usage so you know the 100GB floor is holding. Gmail and Photos stay exactly where they are.",
+    "hours_to_build": 4,
+    "annual_savings": 96,
+    "dont_kill_if": "Your Photos originals or shared family storage genuinely use terabytes. The 2TB tier is also the AI Plus bundle now, so if you actively use the Gemini features you are buying two things, not one.",
+    "build_brief": "Goal: get my Google storage under 100GB so the $1.99 Basic tier fits, without touching Photos or Gmail. Connect Drive and list my largest files and folders by size and last-opened date. Propose an archive set, move approved folders into /archives with a manifest, and verify checksums before anything is removed from Drive. Set a monthly automation that reports Drive usage and flags growth. Done when Drive sits under 80GB, the manifest opens every archived file, and the plan is downgraded.",
+    "sources": [
+      "https://one.google.com/about/plans"
+    ]
+  },
+  {
     "slug": "grammarly",
     "name": "Grammarly",
     "aliases": [
@@ -340,6 +431,29 @@
     ]
   },
   {
+    "slug": "jotform",
+    "name": "Jotform",
+    "aliases": [
+      "Jotform",
+      "JotForm",
+      "Jotform Inc.",
+      "JotForm.com"
+    ],
+    "category": "forms",
+    "typical_price_monthly": 39,
+    "price_basis": "Bronze plan at $39 monthly billing, $234 billed annually, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $468 a year for 25 active forms. Your own server does not count your forms.",
+    "what_zo_builds": "The same form routes Zo builds to replace Typeform, plus the parts Jotform bills limits on: unlimited forms because they are files, unlimited fields because it is your HTML, and storage bounded by your disk instead of a plan table. Submissions land in workspace files, an automation emails you each one, and a private dashboard shows totals per form.",
+    "hours_to_build": 6,
+    "annual_savings": 468,
+    "dont_kill_if": "You collect payments through Jotform integrations or run HIPAA intake on the Gold plan. Regulated or revenue-bearing forms are a wall, not a weekend project.",
+    "build_brief": "Goal: rebuild my Jotform forms as routes I own and stop renting field limits. Export every active form and its submissions. Recreate each as /form/[name] with validation and file-backed storage, then wire an automation that emails new submissions and appends them to a per-form CSV. Rebuild any approval flow as a simple status field plus notification. Run the busiest form in parallel for a week and compare counts. Done when parity holds and the Bronze plan is canceled.",
+    "sources": [
+      "https://www.jotform.com/pricing/"
+    ]
+  },
+  {
     "slug": "kit",
     "name": "Kit",
     "aliases": [
@@ -347,7 +461,7 @@
       "ConvertKit LLC",
       "Kit.com"
     ],
-    "category": "email marketing",
+    "category": "email-marketing",
     "typical_price_monthly": 39,
     "price_basis": "Creator plan for up to 1,000 subscribers, monthly billing, checked 2026-07",
     "verdict": "TRIM",
@@ -609,6 +723,121 @@
     "build_brief": "Goal: replace SavvyCal with a booking route on you. Connect my Google Calendar. Create a route at /book that reads free/busy for the next 14 days and presents slots ranked by my preferences: mornings first, nothing after 4pm, 15 minute buffers between meetings. Let the visitor upload or paste their own calendar file to overlay mutual free times. On submit, write the event with the visitor as guest and email us both. Done when a stranger books a ranked slot and it lands on my calendar with the buffer respected.",
     "sources": [
       "https://savvycal.com/pricing"
+    ]
+  },
+  {
+    "slug": "squarespace",
+    "name": "Squarespace",
+    "aliases": [
+      "Squarespace",
+      "Squarespace Inc.",
+      "SQSP",
+      "Squarespace, Inc."
+    ],
+    "category": "websites",
+    "typical_price_monthly": 29,
+    "price_basis": "Core plan at $29 per month, annual billing prices as displayed, checked 2026-07",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: keep the site, drop Core to Basic. Zo covers the business features that pushed you up a tier.",
+    "what_zo_builds": "The gap between Basic and Core, not the website. Zo builds the deeper analytics report Core charges for as a weekly automation over your site exports, hosts lead and contact forms as routes that write to workspace files, and replaces the premium integrations with direct connections you control. Templates, hosting, and the domain stay on the $19 plan.",
+    "hours_to_build": 8,
+    "annual_savings": 120,
+    "dont_kill_if": "A real store runs through Squarespace checkout, or gift cards and customer accounts are in use. Commerce through the site is a wall; do not migrate a working store to save $120.",
+    "build_brief": "Goal: drop my Squarespace plan from Core to Basic without losing what Core added. List which Core features the site actually used in the last quarter: analytics depth, premium integrations, customer accounts, commerce volume. Rebuild the analytics as a weekly report automation from site exports, move lead forms to routes on my Zo, and confirm nothing sold recently needs Core checkout terms. Downgrade at the end of the billing cycle. Done when the site runs on Basic for a full month with nothing missing.",
+    "sources": [
+      "https://www.squarespace.com/pricing"
+    ]
+  },
+  {
+    "slug": "todoist-pro",
+    "name": "Todoist Pro",
+    "aliases": [
+      "Todoist",
+      "Todoist Pro",
+      "Doist",
+      "Doist Inc."
+    ],
+    "category": "tasks",
+    "typical_price_monthly": 7,
+    "price_basis": "Pro at $7 monthly billing, $60 per year billed annually, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: a to-do list is a text file with reminders. Zo does both without the $84 a year.",
+    "what_zo_builds": "A /todo route over a plain tasks file: projects as headings, tasks with due dates, priorities, and recurring rules. Automations do the Pro work: a morning digest email, custom reminders at exact times, a weekly review summary. Capture works by telling Zo to add a task from chat, email, or Telegram. Your reporting history is the file's own history, not a plan feature.",
+    "hours_to_build": 3,
+    "annual_savings": 84,
+    "dont_kill_if": "People assign you tasks in shared projects, or you rely on offline mobile capture and location reminders. A text file on a server does not buzz your pocket at the grocery store.",
+    "build_brief": "Goal: replace Todoist Pro with a task system I own. Export all projects and tasks. Store them in a tasks file with projects, due dates, priorities, and recurrence. Build a /todo route to view and check off tasks, an automation that emails a morning digest and exact-time reminders, and a capture path so I can add tasks from chat or forwarded email. Run it alongside Todoist for two weeks. Done when nothing falls through, recurring tasks regenerate correctly, and the subscription is canceled.",
+    "sources": [
+      "https://www.todoist.com/pricing",
+      "https://www.todoist.com/help/articles/todoist-plans-pricing-and-billing-faq-Vq2z0HWL6"
+    ]
+  },
+  {
+    "slug": "trello-premium",
+    "name": "Trello Premium",
+    "aliases": [
+      "Trello",
+      "Trello Premium",
+      "Trello.com",
+      "Atlassian Trello"
+    ],
+    "category": "tasks",
+    "typical_price_monthly": 12.5,
+    "price_basis": "Premium at $12.50 monthly billing, $10 per user per month billed annually, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $150 a year for views on a solo board. A kanban is a JSON file with drag and drop.",
+    "what_zo_builds": "A /board route: columns, cards, drag and drop, all reading and writing one JSON file per board in your workspace. Calendar and table views are the same file rendered twice. Automations replace Butler rules: move stale cards, ping you about due dates through email or Telegram. Unlimited boards because files do not have plan limits, and the activity log is a plain append-only file you can grep.",
+    "hours_to_build": 6,
+    "annual_savings": 150,
+    "dont_kill_if": "A team past the free plan's limits lives in your workspace, or guests and admin controls gate real company work. Then it is team software, price it against team budgets.",
+    "build_brief": "Goal: replace my paid Trello with a board I own. Export every board to JSON through Trello's export. Build /board/[name] routes with columns, cards, drag and drop, labels, and due dates stored in per-board files. Add a daily automation that emails me cards due this week and flags cards untouched for 30 days, matching my old Butler rules. Import the exports, run both for two weeks, then cancel Premium. Done when every board renders, drag and drop persists, and the reminders arrive on time.",
+    "sources": [
+      "https://trello.com/pricing"
+    ]
+  },
+  {
+    "slug": "typeform",
+    "name": "Typeform",
+    "aliases": [
+      "Typeform",
+      "TYPEFORM S.L.",
+      "Typeform S.L."
+    ],
+    "category": "forms",
+    "typical_price_monthly": 39,
+    "price_basis": "Basic plan at $39 monthly billing, $28 per month billed annually, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $468 a year to ask questions. A form is one route and a JSON file on a server you already own.",
+    "what_zo_builds": "A /forms route per form: your questions, one per screen if you like the conversational feel, posting to a submissions file in your workspace. An automation emails you each response and appends it to a CSV you can open anywhere. Zo can also generate the thank-you page, redirect logic, and a private /results dashboard. Response limits stop existing because there is no meter.",
+    "hours_to_build": 6,
+    "annual_savings": 468,
+    "dont_kill_if": "Your forms take payments inside Typeform or feed a marketing stack a client depends on. Money through a form is a wall; move that flow deliberately or not at all.",
+    "build_brief": "Goal: replace my paid Typeform with forms I own. Export existing forms and all responses first. Build /form/[name] routes that render my questions, validate answers, and append submissions to per-form JSON files. Add an automation that emails me each new response and a private /results page with counts and a CSV download. Test with one live form for one week alongside Typeform. Done when the responses match, the old embeds are swapped, and the plan is canceled.",
+    "sources": [
+      "https://www.typeform.com/pricing/"
+    ]
+  },
+  {
+    "slug": "wix",
+    "name": "Wix",
+    "aliases": [
+      "Wix",
+      "Wix.com",
+      "WIX.COM LTD",
+      "Wix Premium"
+    ],
+    "category": "websites",
+    "typical_price_monthly": 29.77,
+    "price_basis": "Core plan, yearly billing, USD reference price displayed tax inclusive on wix.com/plans, checked 2026-07",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: drop Core to Light and let Zo run the forms, analytics, and booking pages you upgraded for.",
+    "what_zo_builds": "The Core-only features as routes you own: booking and inquiry forms that write to workspace files and email you, a weekly traffic and lead report, and payment links through your own processor for the odd invoice. Wix keeps doing hosting, templates, and the domain on the $17.77 Light plan. If the site is pure brochure, Zo can host the whole thing, but that is a bigger move than this trim.",
+    "hours_to_build": 8,
+    "annual_savings": 144,
+    "dont_kill_if": "Your store, member area, or booking revenue runs through Wix payments. Money through the site is a wall; brochure pages are not.",
+    "build_brief": "Goal: move from Wix Core to Light and keep every feature I actually use. Audit which Core features fired in the last 90 days: payments, bookings, analytics events, storage above the Light limit. Rebuild inquiry and booking forms as routes that write to my workspace and email me, replace analytics with a weekly report automation, and shrink media storage to fit Light. Downgrade at renewal. Done when a month on Light passes with nothing missing and the savings are banked.",
+    "sources": [
+      "https://www.wix.com/plans"
     ]
   },
   {
