@@ -42,6 +42,118 @@
     ]
   },
   {
+    "slug": "beacons",
+    "name": "Beacons",
+    "aliases": [
+      "Beacons AI",
+      "Beacons, Inc.",
+      "beacons.ai"
+    ],
+    "category": "link in bio",
+    "typical_price_monthly": 8.33,
+    "price_basis": "Creator plan billed $100 annually, represented as $8.33 monthly after cent rounding, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $100 a year to put your domain on a page of links. Your Zo already has the domain and the page.",
+    "what_zo_builds": "A fast public creator page with a custom domain, links, email capture, products, analytics events, SEO metadata, and no platform badge. The content lives in one editable workspace file instead of a creator dashboard.",
+    "hours_to_build": 4,
+    "annual_savings": 99.96,
+    "dont_kill_if": "You sell enough through Beacons that its checkout, affiliate commissions, memberships, or media kit pays for the plan. A link page is easy. Moving a working store is not.",
+    "build_brief": "Goal: replace Beacons Creator with a public route on Zo. Export every link, image, product, email contact, and analytics snapshot. Build a mobile-first page on my domain with the same links, a working email form, product links, SEO metadata, click events, and an editable links file. Do not copy Beacons' design. Done when every old URL has a destination, the page loads fast on a phone, and I can change a link by editing one file.",
+    "sources": [
+      "https://beacons.ai/i/pricing"
+    ]
+  },
+  {
+    "slug": "beehiiv",
+    "name": "beehiiv",
+    "aliases": [
+      "beehiiv, Inc.",
+      "Beehiiv Scale",
+      "Beehiiv"
+    ],
+    "category": "email marketing",
+    "typical_price_monthly": 43,
+    "price_basis": "Scale plan at the entry subscriber tier, monthly price shown on official pricing page, checked 2026-07",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: Launch is free. Make the ad network or automations prove they are worth $516 a year.",
+    "what_zo_builds": "A private publishing desk for posts, subscriber exports, forms, surveys, referral records, and simple automations. Zo can own the content and operating data while beehiiv's free Launch tier keeps the sending pipe and public newsletter online.",
+    "hours_to_build": 8,
+    "annual_savings": 516,
+    "dont_kill_if": "Scale's ad network, Boosts, paid subscriptions, or referral program earns more than $43 a month. Those are network effects, not a pile of forms Zo should impersonate.",
+    "build_brief": "Goal: downgrade beehiiv Scale to Launch without losing the newsletter. Export posts, subscribers, segments, automations, surveys, referral data, and paid-member state. Build a private /newsletter-ops route on Zo for content planning, survey responses, simple sequences, and weekly performance snapshots. Leave delivery and the public archive on Launch. Done when the free plan sends normally, every premium feature I used has an owner, and the last 90 days show Scale did not return more than its fee.",
+    "sources": [
+      "https://www.beehiiv.com/pricing",
+      "https://www.beehiiv.com/support/article/23874462928663-plan-types-and-subscriber-plan-tier-pricing"
+    ]
+  },
+  {
+    "slug": "bio-link",
+    "name": "Bio Link",
+    "aliases": [
+      "Bio.link",
+      "BioLink",
+      "bio link"
+    ],
+    "category": "link in bio",
+    "typical_price_monthly": 5.99,
+    "price_basis": "Pro monthly plan price shown at checkout, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: six dollars a month for links, themes, and analytics. This is one route and a click table.",
+    "what_zo_builds": "A public link page backed by a small JSON file, plus first-party click counts, social metadata, custom colors, and a contact form. No locked theme editor and no separate subscription for the shortest page on the internet.",
+    "hours_to_build": 3,
+    "annual_savings": 71.88,
+    "dont_kill_if": "The free plan already covers you, or Bio Link sends measurable customers through a feature you cannot name and reproduce. If all you use is links and colors, there is no wall.",
+    "build_brief": "Goal: replace Bio Link Pro with a public Zo route. Export or copy my links, icons, colors, profile image, and recent analytics. Build a responsive page with my custom domain, first-party click events, social preview metadata, and a private report route. Store the link order in one JSON file. Done when every link works, analytics exclude my own test clicks, and editing the JSON changes the live page.",
+    "sources": [
+      "https://bio.link/pricing"
+    ]
+  },
+  {
+    "slug": "bitwarden-premium",
+    "name": "Bitwarden Premium",
+    "aliases": [
+      "Bitwarden",
+      "Bitwarden Inc.",
+      "Bitwarden Premium Individual"
+    ],
+    "category": "passwords",
+    "typical_price_monthly": 1.65,
+    "price_basis": "Premium Individual billed $19.80 annually, normalized monthly, checked 2026-07",
+    "verdict": "KEEP",
+    "verdict_reason": "KEEP: $19.80 buys emergency access and phishing protection. Do not homebrew the keys to your life.",
+    "what_zo_builds": "Zo can inventory duplicate accounts, remind you about weak recovery settings, and store non-secret documentation. It should not replace a maintained password manager, browser autofill, encrypted vault sync, or emergency access.",
+    "hours_to_build": 40,
+    "annual_savings": 0,
+    "dont_kill_if": "Keep it. The failure cost is account takeover or permanent lockout, and the subscription is cheaper than one hour of recovery. The free Bitwarden plan is the only sensible trim if Premium features go unused.",
+    "build_brief": "Goal: audit Bitwarden Premium without replacing the password manager. Check whether I use TOTP, file attachments, emergency access, phishing protection, and security reports. If none matter, downgrade to Bitwarden Free after testing export and recovery. Otherwise KEEP Premium. Zo may create a private checklist and renewal reminder, but it must never ingest vault secrets. Done when recovery works and the decision is based on features I use, not the urge to rebuild everything.",
+    "sources": [
+      "https://bitwarden.com/pricing/",
+      "https://bitwarden.com/help/password-manager-plans/"
+    ]
+  },
+  {
+    "slug": "buttondown",
+    "name": "Buttondown",
+    "aliases": [
+      "Buttondown LLC",
+      "Buttondown Email",
+      "buttondown.email"
+    ],
+    "category": "email marketing",
+    "typical_price_monthly": 9,
+    "price_basis": "one paid feature add-on, such as analytics or segmentation, checked 2026-07; core service is free through 100 subscribers",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: the first 100 subscribers are free. Kill the $9 add-on before you move the newsletter.",
+    "what_zo_builds": "A small analytics and segmentation layer over exported Buttondown data. Zo can calculate cohort changes, tag subscribers, collect survey answers, and prepare reports without rebuilding a careful independent email service.",
+    "hours_to_build": 3,
+    "annual_savings": 108,
+    "dont_kill_if": "Your list is over the free tier or the add-on saves real editorial time. Buttondown is already cheap, independent, privacy-minded infrastructure. Do not spend six hours dodging a fair $9 bill.",
+    "build_brief": "Goal: remove one Buttondown add-on while keeping Buttondown as the sender. Export subscribers and email events. Build a private /newsletter-report route that reproduces the exact analytics, tags, or survey view I pay for. Keep unsubscribe and sending inside Buttondown. Done when the replacement answers the three questions I actually use the add-on for and the newsletter still sends through Buttondown unchanged.",
+    "sources": [
+      "https://marketing.buttondown.com/pricing"
+    ]
+  },
+  {
     "slug": "cal-com",
     "name": "Cal.com",
     "aliases": [
@@ -80,6 +192,28 @@
     ]
   },
   {
+    "slug": "carrd",
+    "name": "Carrd",
+    "aliases": [
+      "Carrd Pro",
+      "Carrd Inc.",
+      "carrd.co"
+    ],
+    "category": "websites",
+    "typical_price_monthly": 1.58,
+    "price_basis": "Pro Standard at $19 per year, normalized monthly, checked 2026-07",
+    "verdict": "KEEP",
+    "verdict_reason": "KEEP: $19 a year buys ten custom-domain sites. Rebuilding them to save pocket change is cosplay accounting.",
+    "what_zo_builds": "Zo can build the same landing pages, forms, embeds, analytics, and metadata. That does not make migration a good use of time when Carrd prices ten sites below two dollars a month.",
+    "hours_to_build": 4,
+    "annual_savings": 0,
+    "dont_kill_if": "Keep it by default. Kill only when you already need server-side logic, workspace-owned data, or a Zo integration Carrd cannot run. Complexity, not price, is the reason to move.",
+    "build_brief": "Goal: decide whether one Carrd site has outgrown Carrd. Inventory its forms, embeds, analytics, domains, redirects, and update frequency. If it only needs static content, stop and KEEP Carrd. If it needs server logic or private workspace data, recreate that one site on Zo and preserve its URLs and metadata. Done when the decision is written down and no site moves merely to save $19 a year.",
+    "sources": [
+      "https://carrd.co/pro"
+    ]
+  },
+  {
     "slug": "coda",
     "name": "Coda",
     "aliases": [
@@ -98,6 +232,28 @@
     "build_brief": "Goal: replace Coda with files, tables, and one route. Export my docs as markdown and my tables as CSV into /notes/import. Convert each table to a JSON file stored next to its doc. Walk me through which buttons, formulas, and automations did real work, then rebuild only those as scheduled automations here. Create a route at /notes that renders every doc with full text search. Done when I can read every doc, query every table in plain English, and the Doc Maker seat has nothing left to bill.",
     "sources": [
       "https://coda.io/pricing"
+    ]
+  },
+  {
+    "slug": "constant-contact",
+    "name": "Constant Contact",
+    "aliases": [
+      "Constant Contact, Inc.",
+      "CTCT",
+      "ConstantContact"
+    ],
+    "category": "email marketing",
+    "typical_price_monthly": 12,
+    "price_basis": "Lite plan starting price, monthly, varies with contacts and sends, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $144 a year for templates, a signup form, and one automation. Keep a sender. Fire the dashboard.",
+    "what_zo_builds": "A private campaign desk with subscriber imports, signup forms, templates, scheduling, one welcome automation, and plain reports. A dedicated email API remains responsible for bulk delivery, bounces, complaints, and unsubscribes.",
+    "hours_to_build": 8,
+    "annual_savings": 144,
+    "dont_kill_if": "You rely on Constant Contact's event payments, phone support, or proven 97% delivery claim for a business-critical list. Delivery is a wall. The dashboard is not.",
+    "build_brief": "Goal: replace Constant Contact Lite while preserving lawful, reliable delivery. Export contacts, consent dates, unsubscribes, templates, campaigns, and reports. Build /email on Zo for signup forms, drafting, scheduling, one welcome sequence, and campaign history. Connect a bulk-email API and process bounces, complaints, and unsubscribes. Done when a seeded test list completes signup, welcome, broadcast, unsubscribe, and suppression without exposing subscriber data publicly.",
+    "sources": [
+      "https://www.constantcontact.com/pricing"
     ]
   },
   {
@@ -181,6 +337,29 @@
     "build_brief": "Goal: replace IFTTT Pro with automations on you and cancel the plan. I will list my applets as trigger and action pairs. For each one, create a scheduled automation that polls the trigger source or a route that catches its webhook, then performs the action through the matching integration or an HTTP call. Keep filters as plain if statements in the step code. Log runs to /automations/log.md. Done when every applet pair has fired once for real and nothing on my IFTTT dashboard still matters.",
     "sources": [
       "https://ifttt.com/plans"
+    ]
+  },
+  {
+    "slug": "kit",
+    "name": "Kit",
+    "aliases": [
+      "ConvertKit",
+      "ConvertKit LLC",
+      "Kit.com"
+    ],
+    "category": "email marketing",
+    "typical_price_monthly": 39,
+    "price_basis": "Creator plan for up to 1,000 subscribers, monthly billing, checked 2026-07",
+    "verdict": "TRIM",
+    "verdict_reason": "TRIM: the free plan handles 10,000 subscribers. Stop paying until unlimited sequences earn their seat.",
+    "what_zo_builds": "A private newsletter desk that stores subscribers, tags, drafts, and sequence rules in workspace files, then sends through a provider you control. Zo can replace forms, landing pages, basic sequences, and the dashboard. It should not pretend to replace bulk-email deliverability infrastructure.",
+    "hours_to_build": 8,
+    "annual_savings": 468,
+    "dont_kill_if": "Your paid automations directly sell products, or Kit's deliverability and recommendation network produce more than the subscription costs. Downgrade first. Do not move a revenue-producing list on principle.",
+    "build_brief": "Goal: remove my paid Kit plan without gambling with my list. Export subscribers, tags, forms, sequences, and unsubscribe state. Build a private /newsletter route that imports the export, preserves consent and tags, drafts broadcasts, and runs my basic sequences. Keep a real bulk-email provider for delivery. Start on Kit's free Newsletter plan while I compare delivery results. Done when every form and sequence has a tested replacement, unsubscribe handling works, and two sends match or beat my current delivery numbers.",
+    "sources": [
+      "https://help.kit.com/en/articles/4494683-creator-plan-vs-creator-pro-plan",
+      "https://help.kit.com/en/articles/9053602-the-kit-newsletter-plan"
     ]
   },
   {
@@ -327,6 +506,28 @@
     ]
   },
   {
+    "slug": "prowritingaid",
+    "name": "ProWritingAid",
+    "aliases": [
+      "Pro Writing Aid",
+      "Orpheus Technology",
+      "PWA Premium"
+    ],
+    "category": "writing",
+    "typical_price_monthly": 10,
+    "price_basis": "Premium plan billed $120 yearly, normalized monthly, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $120 a year for reports your Zo can run against the draft without trapping the draft in another app.",
+    "what_zo_builds": "A private editing workflow that reads a chosen draft, reports repetition, sentence length, passive voice, filler, structure, and house-style violations, then proposes edits without overwriting the original.",
+    "hours_to_build": 5,
+    "annual_savings": 120,
+    "dont_kill_if": "You depend on ProWritingAid inside Word, Scrivener, or another editor where the integration removes real friction, or you need its fiction-specific reports every day. A report is replaceable. A settled writing habit may not be.",
+    "build_brief": "Goal: replace my ProWritingAid Premium checks with a private Zo editing workflow. List the reports I actually use. Build a command that accepts one markdown or document file, preserves the original, and writes a review covering repetition, sentence length, passive voice, filler, structure, and my house rules. Require approval before applying edits. Done when three old drafts produce findings at least as useful as the ProWritingAid reports I used.",
+    "sources": [
+      "https://prowritingaid.com/pricing"
+    ]
+  },
+  {
     "slug": "quickbooks",
     "name": "QuickBooks",
     "aliases": [
@@ -345,6 +546,28 @@
     "build_brief": "Goal: keep QuickBooks, cut the manual feeding. Create /finance/inbox and a rule: when I forward a receipt email or drop a PDF, file it as /finance/receipts/YYYY-MM/vendor-amount.pdf and log one line to receipts.csv. Each month I will export the QuickBooks transaction CSV; draft category suggestions in a review file I approve before anything goes back in. Add a quarterly automation reminding me of estimated tax deadlines two weeks ahead. Done when a month of receipts has filed itself and the first review file is approved.",
     "sources": [
       "https://quickbooks.intuit.com/pricing/"
+    ]
+  },
+  {
+    "slug": "quillbot",
+    "name": "QuillBot",
+    "aliases": [
+      "QuillBot Premium",
+      "Quill Bot",
+      "QuillBot, LLC"
+    ],
+    "category": "writing",
+    "typical_price_monthly": 8.33,
+    "price_basis": "Premium annual plan at $99.95, represented as $8.33 monthly after cent rounding, checked 2026-07",
+    "verdict": "KILL",
+    "verdict_reason": "KILL: $100 a year to paraphrase text until nobody wrote it. Your Zo can edit toward your real voice.",
+    "what_zo_builds": "A private rewrite command with explicit modes for shortening, clarifying, changing tone, checking grammar, and preserving quotations. It reads the user's house style and shows a diff instead of returning anonymous paraphrase soup.",
+    "hours_to_build": 3,
+    "annual_savings": 99.96,
+    "dont_kill_if": "You need QuillBot's browser extension across locked-down school or work devices, or a required institutional workflow depends on it. Otherwise the feature is a prompt with a diff viewer.",
+    "build_brief": "Goal: replace QuillBot Premium with a private rewrite workflow on Zo. Create commands for shorten, clarify, formalize, simplify, and grammar check. Read my writing rules before each rewrite, preserve citations and quoted text, and output a side-by-side diff. Never overwrite the source. Done when the same five samples improve without changing their claims or flattening their voice.",
+    "sources": [
+      "https://quillbot.com/upgrade"
     ]
   },
   {
